@@ -1,0 +1,3073 @@
+{
+  "mod_elements": [
+    {
+      "name": "GotoTeleportRun",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "goto_teleport_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GotoTeleportRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GotoTeleport",
+      "type": "command",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goto_teleport",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/GotoTeleportCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "GMRun",
+      "type": "procedure",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "gm_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GMRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GM",
+      "type": "command",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gm",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/GMCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "CompassGiveRun",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "compass_give_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/CompassGiveRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CompassGive",
+      "type": "command",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "compass_give",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/CompassGiveCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "SetPermissionRun",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "set_permission_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/SetPermissionRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetPermission",
+      "type": "command",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "set_permission",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/SetPermissionCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "RandomRun",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "random_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/RandomRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RandomLong",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "random_long",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/RandomLongProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RandomInt",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "random_int",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/RandomIntProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RandomDouble",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "random_double",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/RandomDoubleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RandomMax",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "random_max",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/RandomMaxProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RandomMin",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "random_min",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/RandomMinProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Random",
+      "type": "command",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "random",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/RandomCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "RandomCheck",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/RandomCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RandomLogger",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/RandomLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "result",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlayerLogger",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_logger",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/PlayerLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GotoLogger",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goto_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GotoLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "xyz",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CompassLogger",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "compass_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/CompassLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "compass",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GMLogger",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gm_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GMLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "gamemode",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CraftingRun",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafting_run",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Crafting",
+      "type": "command",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafting",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/CraftingCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "CraftingLogger",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafting_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/CraftingLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetPermissionLogger",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "set_permission_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/SetPermissionLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "command",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Destroyable",
+      "type": "tag",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destroyable",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/tags/blocks/destroyable.json"
+        ]
+      }
+    },
+    {
+      "name": "Collectable",
+      "type": "tag",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collectable",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/tags/blocks/collectable.json"
+        ]
+      }
+    },
+    {
+      "name": "OPDestroyable",
+      "type": "tag",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "op_destroyable",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/tags/blocks/op_destroyable.json"
+        ]
+      }
+    },
+    {
+      "name": "CollectBlock",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "collect_block",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/CollectBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TipArrow",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tip_arrow",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/TipArrowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "KRun",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "k_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/KRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "K",
+      "type": "command",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "k",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/KCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "KTick",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "k_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/KTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetSuspiciousStewEffects",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "set_suspicious_stew_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/SetSuspiciousStewEffectsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NetheriteUpgradeSmithingTemplate",
+      "type": "recipe",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_upgrade_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/netherite_upgrade_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "CoastArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coast_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/coast_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "DuneArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dune_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/dune_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "EyeArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eye_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/eye_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "HostArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "host_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/host_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "RaiserArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raiser_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/raiser_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "RibArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rib_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/rib_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "SentryArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sentry_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/sentry_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "ShaperArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shaper_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/shaper_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "SilenceArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silence_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/silence_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "SnoutArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snout_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/snout_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "SpireArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spire_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/spire_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "TideArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tide_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/tide_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "VexArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vex_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/vex_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "WardArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ward_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/ward_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "WayfinderArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wayfinder_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/wayfinder_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "WildArmorTrimSmithingTemplate",
+      "type": "recipe",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wild_armor_trim_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/wild_armor_trim_smithing_template.json"
+        ]
+      },
+      "path": "~/CheaperSmithingTemplate"
+    },
+    {
+      "name": "NetheriteIngot",
+      "type": "recipe",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_ingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/netherite_ingot.json"
+        ]
+      }
+    },
+    {
+      "name": "SoulTorch",
+      "type": "recipe",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_torch",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/soul_torch.json"
+        ]
+      }
+    },
+    {
+      "name": "SoulLantern",
+      "type": "recipe",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_lantern",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/soul_lantern.json"
+        ]
+      }
+    },
+    {
+      "name": "SoulCampfire",
+      "type": "recipe",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_campfire",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/soul_campfire.json"
+        ]
+      }
+    },
+    {
+      "name": "WoolToString",
+      "type": "recipe",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wool_to_string",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/wool_to_string.json"
+        ]
+      }
+    },
+    {
+      "name": "R13",
+      "type": "recipe",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r_13",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/r_13.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Cat",
+      "type": "recipe",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cat",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/cat.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Blocks",
+      "type": "recipe",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blocks",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/blocks.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Chirp",
+      "type": "recipe",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chirp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/chirp.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Far",
+      "type": "recipe",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "far",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/far.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Mall",
+      "type": "recipe",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mall",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/mall.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Mellohi",
+      "type": "recipe",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mellohi",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/mellohi.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Stal",
+      "type": "recipe",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stal",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/stal.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Strad",
+      "type": "recipe",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strad",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/strad.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Ward",
+      "type": "recipe",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ward",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/ward.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "R11",
+      "type": "recipe",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r_11",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/r_11.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Wait",
+      "type": "recipe",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wait",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/wait.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Pigstep",
+      "type": "recipe",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pigstep",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/pigstep.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Otherside",
+      "type": "recipe",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "otherside",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/otherside.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "R5",
+      "type": "recipe",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r_5",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/r_5.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "Relic",
+      "type": "recipe",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "relic",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/relic.json"
+        ]
+      },
+      "path": "~/MusicDisc"
+    },
+    {
+      "name": "KLogger",
+      "type": "procedure",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "k_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/KLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IronDoorSmelt",
+      "type": "recipe",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_door_smelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/iron_door_smelt.json"
+        ]
+      }
+    },
+    {
+      "name": "IronDoorBlast",
+      "type": "recipe",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_door_blast",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/iron_door_blast.json"
+        ]
+      }
+    },
+    {
+      "name": "IronTrapdoorSmelt",
+      "type": "recipe",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_trapdoor_smelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/iron_trapdoor_smelt.json"
+        ]
+      }
+    },
+    {
+      "name": "IronTrapdoorBlast",
+      "type": "recipe",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_trapdoor_blast",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/iron_trapdoor_blast.json"
+        ]
+      }
+    },
+    {
+      "name": "ChainSmelt",
+      "type": "recipe",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chain_smelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/chain_smelt.json"
+        ]
+      }
+    },
+    {
+      "name": "ChainBlast",
+      "type": "recipe",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chain_blast",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/chain_blast.json"
+        ]
+      }
+    },
+    {
+      "name": "IronPressurePlateSmelt",
+      "type": "recipe",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_pressure_plate_smelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/iron_pressure_plate_smelt.json"
+        ]
+      }
+    },
+    {
+      "name": "IronPressurePlateBlast",
+      "type": "recipe",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_pressure_plate_blast",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/iron_pressure_plate_blast.json"
+        ]
+      }
+    },
+    {
+      "name": "GoldPressurePlateSmelt",
+      "type": "recipe",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_pressure_plate_smelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/gold_pressure_plate_smelt.json"
+        ]
+      }
+    },
+    {
+      "name": "GoldPressurePlateBlast",
+      "type": "recipe",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_pressure_plate_blast",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/gold_pressure_plate_blast.json"
+        ]
+      }
+    },
+    {
+      "name": "Gunpowder",
+      "type": "recipe",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gunpowder",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/gunpowder.json"
+        ]
+      }
+    },
+    {
+      "name": "Slimeball",
+      "type": "recipe",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimeball",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/slimeball.json"
+        ]
+      }
+    },
+    {
+      "name": "Orange",
+      "type": "recipe",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orange",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/orange.json"
+        ]
+      }
+    },
+    {
+      "name": "Pink",
+      "type": "recipe",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/pink.json"
+        ]
+      }
+    },
+    {
+      "name": "RedRoot",
+      "type": "recipe",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_root",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/red_root.json"
+        ]
+      }
+    },
+    {
+      "name": "CyanRoot",
+      "type": "recipe",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cyan_root",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/cyan_root.json"
+        ]
+      }
+    },
+    {
+      "name": "RedVine",
+      "type": "recipe",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_vine",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/red_vine.json"
+        ]
+      }
+    },
+    {
+      "name": "CyanVine",
+      "type": "recipe",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cyan_vine",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/cyan_vine.json"
+        ]
+      }
+    },
+    {
+      "name": "FlowerBannerPattern",
+      "type": "recipe",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flower_banner_pattern",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/flower.json"
+        ]
+      },
+      "path": "~/BannerPattern"
+    },
+    {
+      "name": "CreeperBannerPattern",
+      "type": "recipe",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creeper_banner_pattern",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/creeper.json"
+        ]
+      },
+      "path": "~/BannerPattern"
+    },
+    {
+      "name": "SkullBannerPattern",
+      "type": "recipe",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skull_banner_pattern",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/skull.json"
+        ]
+      },
+      "path": "~/BannerPattern"
+    },
+    {
+      "name": "MojangBannerPattern",
+      "type": "recipe",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mojang_banner_pattern",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/mojang.json"
+        ]
+      },
+      "path": "~/BannerPattern"
+    },
+    {
+      "name": "GlobeBannerPattern",
+      "type": "recipe",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "globe_banner_pattern",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/globe.json"
+        ]
+      },
+      "path": "~/BannerPattern"
+    },
+    {
+      "name": "PiglinBannerPattern",
+      "type": "recipe",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piglin_banner_pattern",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/piglin.json"
+        ]
+      },
+      "path": "~/BannerPattern"
+    },
+    {
+      "name": "DebugGameruleRun",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "debug_gamerule_run",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DebugGamerule",
+      "type": "command",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "debug_gamerule",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/DebugGameruleCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "DebugGameruleLogger",
+      "type": "procedure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debug_gamerule_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/DebugGameruleLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "enabled",
+            "type": "logic"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LeatherHorseArmor",
+      "type": "recipe",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "leather_horse_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/leather_horse_armor.json"
+        ]
+      }
+    },
+    {
+      "name": "IronHorseArmor",
+      "type": "recipe",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_horse_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/iron_horse_armor.json"
+        ]
+      }
+    },
+    {
+      "name": "GoldenHorseArmor",
+      "type": "recipe",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_horse_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/golden_horse_armor.json"
+        ]
+      }
+    },
+    {
+      "name": "DiamondHorseArmor",
+      "type": "recipe",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_horse_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/diamond_horse_armor.json"
+        ]
+      }
+    },
+    {
+      "name": "Saddle",
+      "type": "recipe",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "saddle",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/saddle.json"
+        ]
+      }
+    },
+    {
+      "name": "Bookshelf",
+      "type": "recipe",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bookshelf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/bookshelf.json"
+        ]
+      }
+    },
+    {
+      "name": "ChiseledBookshelf",
+      "type": "recipe",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chiseled_bookshelf",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/chiseled_bookshelf.json"
+        ]
+      }
+    },
+    {
+      "name": "Lists",
+      "type": "code",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "lists",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/Lists.java"
+        ]
+      }
+    },
+    {
+      "name": "Andesite",
+      "type": "recipe",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "andesite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/andesite.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Granite",
+      "type": "recipe",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "granite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/granite.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "CraftingTable4x",
+      "type": "recipe",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crafting_table_4x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/crafting_table_4x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Chest4x",
+      "type": "recipe",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chest_4x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/chest_4x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Stick4x",
+      "type": "recipe",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stick_4x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/stick_4x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Bowl4x",
+      "type": "recipe",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bowl_4x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/bowl_4x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Bucket9x",
+      "type": "recipe",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bucket_9x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/bucket_9x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Cauldron9x",
+      "type": "recipe",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cauldron_9x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/cauldron_9x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Chain9x",
+      "type": "recipe",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chain_9x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/chain_9x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "IronPressurePlate9x",
+      "type": "recipe",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_pressure_plate_9x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/iron_pressure_plate_9x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "IronDoor9x",
+      "type": "recipe",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_door_9x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/iron_door_9x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "IronTrapdoor9x",
+      "type": "recipe",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_trapdoor_9x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/iron_trapdoor_9x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "GoldPressurePlate9x",
+      "type": "recipe",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_pressure_plate_9x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/gold_pressure_plate_9x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "LightningRod9x",
+      "type": "recipe",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_rod_9x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/lightning_rod_9x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "WaxedLightningRod9x",
+      "type": "recipe",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "waxed_lightning_rod_9x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/waxed_lightning_rod_9x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Ladder2x",
+      "type": "recipe",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladder_2x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/ladder_2x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Ladder8x",
+      "type": "recipe",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ladder_8x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/ladder_8x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Diorite",
+      "type": "recipe",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diorite",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/diorite.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "BoneBlock3x",
+      "type": "recipe",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bone_block_3x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/bone_block_3x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Compass9x",
+      "type": "recipe",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "compass_9x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/compass_9x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Clock9x",
+      "type": "recipe",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clock_9x",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/clock_9x.json"
+        ]
+      },
+      "path": "~/LazyCrafting"
+    },
+    {
+      "name": "Dispenser",
+      "type": "recipe",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dispenser",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/dispenser.json"
+        ]
+      }
+    },
+    {
+      "name": "FlyRun",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "fly_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/FlyRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fly",
+      "type": "command",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fly",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/FlyCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "FlyLogger",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fly_logger",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Translation",
+      "type": "code",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "translation",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/Translation.java"
+        ]
+      }
+    },
+    {
+      "name": "SetLanguageRun",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "set_language_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/SetLanguageRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetLanguage",
+      "type": "command",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_language",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/SetLanguageCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "EnchantedGoldenApple",
+      "type": "recipe",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enchanted_golden_apple",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/enchanted_golden_apple.json"
+        ]
+      }
+    },
+    {
+      "name": "HeadRun",
+      "type": "procedure",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "head_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/HeadRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Head",
+      "type": "command",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "head",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/HeadCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "HeadLogger",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "head_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/HeadLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "skullOwner",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FreeRun",
+      "type": "procedure",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "free_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/FreeRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Free",
+      "type": "command",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "free",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/FreeCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "FreeBackRun",
+      "type": "procedure",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "free_back_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/FreeBackRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FreeLogger",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "free_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/FreeLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FreeBackLogger",
+      "type": "procedure",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "free_back_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/FreeBackLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GammaRun",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "gamma_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GammaRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Gamma",
+      "type": "command",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gamma",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/GammaCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "GammaLogger",
+      "type": "procedure",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gamma_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GammaLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GammaTick",
+      "type": "procedure",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gamma_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GammaTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FreeToEntityRun",
+      "type": "procedure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "free_to_entity_run",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FreeToLocationRun",
+      "type": "procedure",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "free_to_location_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/FreeToLocationRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FreeToLogger",
+      "type": "procedure",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "free_to_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/FreeToLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlueIce",
+      "type": "recipe",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_ice",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/blue_ice.json"
+        ]
+      }
+    },
+    {
+      "name": "PackedIce",
+      "type": "recipe",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "packed_ice",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/recipes/packed_ice.json"
+        ]
+      }
+    },
+    {
+      "name": "HatRun",
+      "type": "procedure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "hat_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/HatRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Hat",
+      "type": "command",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hat",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/HatCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "HatLogger",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hat_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/HatLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetInfos",
+      "type": "command",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_infos",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/GetInfosCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "GetOS",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "get_os",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GetOSProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetJVM",
+      "type": "procedure",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "get_jvm",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GetJVMProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetMEM",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "get_mem",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GetMEMProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetMC",
+      "type": "procedure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "get_mc",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GetMCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetAll",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_all",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GetAllProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetMB",
+      "type": "procedure",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "get_mb",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GetMBProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetGB",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "get_gb",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GetGBProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetB",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "get_b",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GetBProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetMods",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "get_mods",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GetModsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LoggerRun",
+      "type": "procedure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logger_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/LoggerRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetLog",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "get_log",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GetLogProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Logger",
+      "type": "command",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/LoggerCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "LoggerRunWarn",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logger_run_warn",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/LoggerRunWarnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LoggerRunError",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "logger_run_error",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/LoggerRunErrorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GetModsAll",
+      "type": "procedure",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "get_mods_all",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GetModsAllProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PaintingRun",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "painting_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/PaintingRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Painting",
+      "type": "command",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painting",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/PaintingCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "PaintingLogger",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painting_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/PaintingLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "id",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NameRun",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "name_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/NameRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Name",
+      "type": "command",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/NameCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "NameLogger",
+      "type": "procedure",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/NameLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NameTag",
+      "type": "recipe",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "name_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/blueice_server_tweaks/recipes/name_tag.json"
+        ]
+      }
+    },
+    {
+      "name": "GRun",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "g_run",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GRunProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "G",
+      "type": "command",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "g",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/command/GCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "GLogger",
+      "type": "procedure",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "g_logger",
+      "metadata": {
+        "files": [
+          "src/main/java/top/blueicemiaow/blueiceservertweaks/procedures/GLoggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {}
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "CheaperSmithingTemplate",
+        "children": []
+      },
+      {
+        "name": "MusicDisc",
+        "children": []
+      },
+      {
+        "name": "BannerPattern",
+        "children": []
+      },
+      {
+        "name": "LazyCrafting",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "blueice_server_tweaks",
+    "modName": "BlueIce Server Tweaks",
+    "version": "1.6.6",
+    "description": "A simple mod that adds a few useful server-side features.",
+    "author": "BlueIceNeko",
+    "websiteURL": "https://modrinth.com/user/BlueIceNeko",
+    "license": "GNU General Public License version 3 (GPLv3)",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": true,
+    "modPicture": "icon",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "fabric-1.20.1",
+    "credits": "MCreator",
+    "modElementsPackage": "top.blueicemiaow.blueiceservertweaks",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300452316
+}
