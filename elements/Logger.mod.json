@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "logger",
+    "type": "STANDARD",
+    "permissionLevel": "3",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">info</field><statement name=\"args\"><block type=\"message\"><field name=\"name\">log</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">LoggerRun</field></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">warn</field><statement name=\"args\"><block type=\"message\"><field name=\"name\">log</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">LoggerRunWarn</field></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">error</field><statement name=\"args\"><block type=\"message\"><field name=\"name\">log</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">LoggerRunError</field></block></statement></block></statement><next><block type=\"message\"><field name=\"name\">log</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">LoggerRun</field></block></statement></block></next></block></next></block></next></block></next></block></xml>"
+  }
+}

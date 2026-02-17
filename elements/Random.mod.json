@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "random",
+    "type": "STANDARD",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"call_procedure\"><field name=\"procedure\">RandomRun</field><next><block type=\"literal\"><field name=\"name\">double</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">RandomDouble</field></block></statement><next><block type=\"literal\"><field name=\"name\">long</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">RandomLong</field></block></statement><next><block type=\"literal\"><field name=\"name\">int</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">RandomInt</field><next><block type=\"number_default\"><field name=\"name\">max</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">RandomMax</field><next><block type=\"number_default\"><field name=\"name\">min</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">RandomMin</field></block></statement></block></next></block></statement></block></next></block></statement></block></next></block></next></block></next></block></next></block></xml>"
+  }
+}

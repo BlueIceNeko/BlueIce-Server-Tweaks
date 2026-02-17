@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.1,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "Items.IRON_DOOR"
+    },
+    "smeltingReturnStack": {
+      "value": "Items.IRON_NUGGET"
+    },
+    "name": "iron_door_smelt",
+    "namespace": "mod"
+  }
+}

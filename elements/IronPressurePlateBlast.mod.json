@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.1,
+    "cookingTime": 100,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "Blocks.HEAVY_WEIGHTED_PRESSURE_PLATE"
+    },
+    "blastingReturnStack": {
+      "value": "Items.IRON_NUGGET"
+    },
+    "name": "iron_pressure_plate_blast",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 24,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "TAG:minecraft:logs"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "Blocks.LADDER"
+    },
+    "name": "ladder_8x",
+    "namespace": "mod"
+  }
+}
