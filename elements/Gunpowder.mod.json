@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 9,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "Items.BLAZE_POWDER"
+      },
+      {
+        "value": "Items.SUGAR"
+      },
+      {
+        "value": "Items.SUGAR"
+      },
+      {
+        "value": "Items.COAL#1"
+      },
+      {
+        "value": "Items.COAL#1"
+      },
+      {
+        "value": "Items.COAL#1"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "Items.GUNPOWDER"
+    },
+    "name": "gunpowder",
+    "namespace": "mod"
+  }
+}

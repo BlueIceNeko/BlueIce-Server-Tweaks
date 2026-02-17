@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "gm",
+    "type": "STANDARD",
+    "permissionLevel": "2",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"message\"><field name=\"name\">gamemode</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">GMRun</field></block></statement></block></next></block></xml>"
+  }
+}

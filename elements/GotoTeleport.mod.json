@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "goto",
+    "type": "STANDARD",
+    "permissionLevel": "No requirement",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"blockpos\"><field name=\"name\">location</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">GotoTeleportRun</field></block></statement></block></next></block></xml>"
+  }
+}

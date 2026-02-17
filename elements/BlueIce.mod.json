@@ -1,0 +1,48 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.PACKED_ICE"
+      },
+      {
+        "value": "Blocks.PACKED_ICE"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.PACKED_ICE"
+      },
+      {
+        "value": "Blocks.PACKED_ICE"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "Blocks.BLUE_ICE"
+    },
+    "name": "blue_ice",
+    "namespace": "minecraft"
+  }
+}

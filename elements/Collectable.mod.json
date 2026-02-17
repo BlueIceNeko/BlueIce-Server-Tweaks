@@ -1,0 +1,115 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "Blocks.NOTEBLOCK"
+      },
+      {
+        "value": "Blocks.PISTON"
+      },
+      {
+        "value": "Blocks.STICKY_PISTON"
+      },
+      {
+        "value": "Blocks.TNT"
+      },
+      {
+        "value": "TAG:minecraft:doors"
+      },
+      {
+        "value": "TAG:minecraft:trapdoors"
+      },
+      {
+        "value": "TAG:minecraft:buttons"
+      },
+      {
+        "value": "TAG:minecraft:pressure_plates"
+      },
+      {
+        "value": "Blocks.TRIPWIRE_HOOK"
+      },
+      {
+        "value": "Blocks.DAYLIGHT_DETECTOR"
+      },
+      {
+        "value": "Blocks.REDSTONE_TORCH"
+      },
+      {
+        "value": "Blocks.REDSTONE_WALL_TORCH"
+      },
+      {
+        "value": "Blocks.REDSTONE_WIRE"
+      },
+      {
+        "value": "Blocks.UNPOWERED_REPEATER"
+      },
+      {
+        "value": "Blocks.UNPOWERED_COMPARATOR"
+      },
+      {
+        "value": "Blocks.REDSTONE_LAMP"
+      },
+      {
+        "value": "Blocks.OBSERVER"
+      },
+      {
+        "value": "Blocks.TARGET"
+      },
+      {
+        "value": "Blocks.LIGHTNING_ROD"
+      },
+      {
+        "value": "Blocks.SCULK_SENSOR"
+      },
+      {
+        "value": "Blocks.CALIBRATED_SCULK_SENSOR"
+      },
+      {
+        "value": "Blocks.SCULK_CATALYST"
+      },
+      {
+        "value": "Blocks.SCULK_SHRIEKER"
+      },
+      {
+        "value": "Blocks.ICE"
+      },
+      {
+        "value": "Blocks.PACKED_ICE"
+      },
+      {
+        "value": "Blocks.BLUE_ICE"
+      },
+      {
+        "value": "Blocks.DRAGON_EGG"
+      },
+      {
+        "value": "Blocks.BELL"
+      },
+      {
+        "value": "TAG:minecraft:rails"
+      },
+      {
+        "value": "Blocks.BUDDING_AMETHYST"
+      },
+      {
+        "value": "Blocks.AMETHYST_CLUSTER"
+      },
+      {
+        "value": "Blocks.BEACON"
+      },
+      {
+        "value": "TAG:minecraft:anvil"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "collectable",
+    "namespace": "mod"
+  }
+}

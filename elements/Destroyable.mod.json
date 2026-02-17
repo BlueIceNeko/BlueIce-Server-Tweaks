@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "Blocks.REINFORCED_DEEPSLATE"
+      },
+      {
+        "value": "Blocks.MOB_SPAWNER"
+      },
+      {
+        "value": "TAG:blueice_server_tweaks:collectable"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "destroyable",
+    "namespace": "mod"
+  }
+}
