@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:reinforced_deepslate",
+    "minecraft:spawner",
+    "#blueice_server_tweaks:collectable"
+  ]
+}
