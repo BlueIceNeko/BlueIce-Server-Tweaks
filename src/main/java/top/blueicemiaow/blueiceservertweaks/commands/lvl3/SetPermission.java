@@ -17,6 +17,7 @@ import top.blueicemiaow.blueiceservertweaks.tools.TranslationHelper;
 public class SetPermission {
     private static final String SET = "set";
     private static final String UPDATE = "update_permission";
+    private static final String GET = "get";
     private static final String PERMISSION = "permission";
     private static final String PLAYER = "player";
 
@@ -31,7 +32,11 @@ public class SetPermission {
             return 0;
         }))));
         for (String command : Lists.commands) {
-            builder.then(Commands.argument(PLAYER, EntityArgument.player()).then(Commands.literal(command).then(Commands.argument(PERMISSION, BoolArgumentType.bool()).executes(arguments -> {
+            builder.then(Commands.argument(PLAYER, EntityArgument.player()).then(Commands.literal(command).executes(arguments -> {
+                ServerPlayer player = EntityArgument.getPlayer(arguments, PLAYER);
+                CommandHelper.log(arguments, "%s%s%s%s%b".formatted(CommandHelper.getEntityInfos(player), TranslationHelper.get("of"), command, TranslationHelper.get(GET), PermissionHelper.get(player, command)));
+                return 0;
+            }).then(Commands.argument(PERMISSION, BoolArgumentType.bool()).executes(arguments -> {
                 ServerPlayer player = EntityArgument.getPlayer(arguments, PLAYER);
                 boolean permission = BoolArgumentType.getBool(arguments, PERMISSION);
                 PermissionHelper.set(player, command, permission);

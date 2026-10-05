@@ -1,15 +1,11 @@
 package top.blueicemiaow.blueiceservertweaks.tools;
 
-import net.minecraft.core.Holder;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Difficulty;
-import net.minecraft.world.clock.WorldClock;
 import net.minecraft.world.entity.ai.gossip.GossipType;
 import net.minecraft.world.level.gamerules.GameRules;
 import top.blueicemiaow.blueiceservertweaks.mixins.GossipTypeMixin;
-
-import java.util.Optional;
 
 public class Post {
     public static void majorPositive(boolean enabled) {

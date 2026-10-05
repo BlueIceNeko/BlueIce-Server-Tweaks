@@ -48,6 +48,7 @@ public class Register {
         UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> hand == player.getUsedItemHand() && FletchingTable.modifyCrossbow(player, level, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
         UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> hand == player.getUsedItemHand() && Hoe.harvestCrop(player, level, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
         UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> hand == player.getUsedItemHand() && Hoe.recycleEye(player, level, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
+        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> hand == player.getUsedItemHand() && Hoe.collectBlock(player, level, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
     }
 
     public static void tick() {

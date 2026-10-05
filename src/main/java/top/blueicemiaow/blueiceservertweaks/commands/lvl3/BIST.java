@@ -18,6 +18,7 @@ import top.blueicemiaow.blueiceservertweaks.tools.TranslationHelper;
 public class BIST {
     private static final String SET = "set";
     private static final String UPDATE = "update";
+    private static final String GET = "get";
     private static final String ENABLED = "enabled";
     private static final String LANGUAGE = "language";
 
@@ -39,9 +40,11 @@ public class BIST {
             return 0;
         })));
         for (String function : Config.defaultConfig.functions.keySet()) {
-            builder.then(Commands.literal(function).then(Commands.argument(ENABLED, BoolArgumentType.bool()).executes(arguments -> {
-                boolean enabled = BoolArgumentType.getBool(arguments, ENABLED);
-                set(arguments, function, enabled);
+            builder.then(Commands.literal(function).executes(arguments -> {
+                CommandHelper.log(arguments, "%s(%s)%s%b".formatted(TranslationHelper.get(function), function, TranslationHelper.get(GET), ConfigHelper.get(function)));
+                return 0;
+            }).then(Commands.argument(ENABLED, BoolArgumentType.bool()).executes(arguments -> {
+                set(arguments, function, BoolArgumentType.getBool(arguments, ENABLED));
                 return 0;
             })));
         }

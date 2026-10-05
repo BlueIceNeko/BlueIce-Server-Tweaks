@@ -45,12 +45,14 @@ public class Config {
     public static final String powerful_bone_meal = "powerful_bone_meal";
     public static final String hoe_harvest_crop = "hoe_harvest_crop";
     public static final String hoe_recycle_ender_eye = "hoe_recycle_ender_eye";
+    public static final String hoe_collect_block = "hoe_collect_block";
     public static final String chiseled_bookshelf_provide_enchantment_power = "chiseled_bookshelf_provide_enchantment_power";
     public static final String permission_system = "permission_system";
     public static final String sudo = "sudo";
 
     public static final HashSet<String> experiments = new HashSet<>(Set.of(
             enhanced_end_portal,
+            hoe_collect_block,
             chiseled_bookshelf_provide_enchantment_power
     ));
 
@@ -97,6 +99,7 @@ public class Config {
                     Map.entry(powerful_bone_meal, false),
                     Map.entry(hoe_harvest_crop, false),
                     Map.entry(hoe_recycle_ender_eye, false),
+                    Map.entry(hoe_collect_block, false),
                     Map.entry(chiseled_bookshelf_provide_enchantment_power, false),
                     Map.entry(permission_system, true),
                     Map.entry(sudo, true)

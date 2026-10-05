@@ -9,8 +9,6 @@ import net.minecraft.world.entity.Entity;
 import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
 
-import java.util.Optional;
-
 public class CommandHelper {
     public static boolean log(Entity entity, String log) {
         BlueIceServerTweaks.WRAPPER.info(log);
@@ -56,7 +54,7 @@ public class CommandHelper {
         return "(%d, %d, %d)".formatted(x, y, z);
     }
 
-    public static String getLocationString(float x, float y, float z) {
+    public static String getLocationString(double x, double y, double z) {
         return "(%f, %f, %f)".formatted(x, y, z);
     }
 }

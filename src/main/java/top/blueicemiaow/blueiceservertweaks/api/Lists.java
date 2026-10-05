@@ -3,7 +3,7 @@ package top.blueicemiaow.blueiceservertweaks.api;
 import java.util.*;
 
 public class Lists {
-    public static HashSet<String> commands = new HashSet<>(Set.of(
+    public static final HashSet<String> commands = new HashSet<>(Set.of(
             "compass",
             "craft",
             "fly",
@@ -18,7 +18,7 @@ public class Lists {
 
     public record Stew(String id, int duration) {}
 
-    public static HashMap<String, Stew> stews = new HashMap<>(Map.ofEntries(
+    public static final HashMap<String, Stew> stews = new HashMap<>(Map.ofEntries(
             Map.entry("minecraft:night_vision",         new Stew("minecraft:night_vision",    3600)),
             Map.entry("minecraft:long_night_vision",    new Stew("minecraft:night_vision",    9600)),
             Map.entry("minecraft:invisibility",         new Stew("minecraft:invisibility",    3600)),
@@ -45,8 +45,12 @@ public class Lists {
             Map.entry("minecraft:long_weakness",        new Stew("minecraft:weakness",        4800)),
             Map.entry("minecraft:slow_falling",         new Stew("minecraft:slow_falling",    1800)),
             Map.entry("minecraft:long_slow_falling",    new Stew("minecraft:slow_falling",    4800)),
-            Map.entry("minecraft:luck",                 new Stew("minecraft:luck",            6000))
+            Map.entry("minecraft:luck",                 new Stew("minecraft:luck",            6000)),
+            Map.entry("minecraft:wind_charged",         new Stew("minecraft:wind_charged",    3600)),
+            Map.entry("minecraft:weaving",              new Stew("minecraft:weaving",         3600)),
+            Map.entry("minecraft:oozing",               new Stew("minecraft:oozing",          3600)),
+            Map.entry("minecraft:infested",             new Stew("minecraft:infested",        3600))
     ));
 
-    public static HashMap<String, Translation> translations = new HashMap<>();
+    public static final HashMap<String, Translation> translations = new HashMap<>();
 }

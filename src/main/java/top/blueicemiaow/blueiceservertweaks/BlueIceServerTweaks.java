@@ -26,6 +26,8 @@ public class BlueIceServerTweaks implements ModInitializer {
 
     public static final TagKey<Block> EMPTY_BLOCK = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MODID, "empty"));
     public static final TagKey<Block> ENCHANTMENT_POWER_PROVIDER = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MODID, "enchantment_power_provider"));
+    public static final TagKey<Block> COLLECTABLE = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MODID, "collectable"));
+
     public static final TagKey<Item> EMPTY_ITEM = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "empty"));
     public static final TagKey<Item> CAN_DISABLE_SHIELD = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "can_disable_shield"));
     public static final TagKey<Item> PIGLIN_SAFE_ARMOR = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "piglin_safe_armor"));
@@ -48,5 +50,6 @@ public class BlueIceServerTweaks implements ModInitializer {
         Register.tick();
         WRAPPER.info(TranslationHelper.get("register_tick"));
         Register.post();
+        WRAPPER.info(TranslationHelper.get("register_post"));
     }
 }

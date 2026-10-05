@@ -3,6 +3,7 @@ package top.blueicemiaow.blueiceservertweaks.gameplay;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -10,6 +11,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
+import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
@@ -42,6 +44,25 @@ public class Hoe {
                 eye.setCount(1);
                 player.addItem(eye);
                 player.getInventory().setChanged();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean collectBlock(Player entity, Level level, BlockPos pos) {
+        if (ConfigHelper.get(Config.hoe_collect_block) && check(entity, level)) {
+            ServerLevel world = (ServerLevel) level;
+            BlockState state = world.getBlockState(pos);
+            if (state.is(BlueIceServerTweaks.COLLECTABLE)) {
+                ServerPlayer player = (ServerPlayer) entity;
+                if (state.is(BlockTags.SHULKER_BOXES)) {
+                    Block.getDrops(state, world, pos, world.getBlockEntity(pos)).forEach(player::addItem);
+                } else {
+                    player.addItem(state.getCloneItemStack(world, pos, true));
+                }
+                player.getInventory().setChanged();
+                world.removeBlock(pos, false);
                 return true;
             }
         }
