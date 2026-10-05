@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:dune_armor_trim_smithing_template",
+    "minecraft:diamond",
+    "minecraft:sandstone"
+  ],
+  "result": {
+    "id": "minecraft:dune_armor_trim_smithing_template",
+    "count": 2
+  }
+}

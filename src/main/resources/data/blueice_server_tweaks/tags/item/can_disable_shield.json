@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:axes",
+    "#minecraft:anvil",
+    "minecraft:obsidian",
+    "minecraft:crying_obsidian",
+    "minecraft:netherite_block",
+    "minecraft:heavy_core",
+    "minecraft:mace"
+  ]
+}

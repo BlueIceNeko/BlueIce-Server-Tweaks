@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "minecraft:cobblestone",
+    "minecraft:cobblestone",
+    "minecraft:quartz"
+  ],
+  "result": {
+    "id": "minecraft:andesite",
+    "count": 2
+  }
+}

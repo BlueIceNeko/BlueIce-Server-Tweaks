@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:shaper_armor_trim_smithing_template",
+    "minecraft:diamond",
+    "minecraft:terracotta"
+  ],
+  "result": {
+    "id": "minecraft:shaper_armor_trim_smithing_template",
+    "count": 2
+  }
+}

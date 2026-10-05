@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:coast_armor_trim_smithing_template",
+    "minecraft:diamond",
+    "minecraft:cobblestone"
+  ],
+  "result": {
+    "id": "minecraft:coast_armor_trim_smithing_template",
+    "count": 2
+  }
+}

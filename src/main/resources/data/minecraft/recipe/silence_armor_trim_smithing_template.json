@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:silence_armor_trim_smithing_template",
+    "minecraft:diamond",
+    "minecraft:cobbled_deepslate"
+  ],
+  "result": {
+    "id": "minecraft:silence_armor_trim_smithing_template",
+    "count": 2
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:snout_armor_trim_smithing_template",
+    "minecraft:diamond",
+    "minecraft:blackstone"
+  ],
+  "result": {
+    "id": "minecraft:snout_armor_trim_smithing_template",
+    "count": 2
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bolt_armor_trim_smithing_template",
+    "minecraft:diamond",
+    [
+      "minecraft:copper_block",
+      "minecraft:waxed_copper_block"
+    ]
+  ],
+  "result": {
+    "id": "minecraft:bolt_armor_trim_smithing_template",
+    "count": 2
+  }
+}
