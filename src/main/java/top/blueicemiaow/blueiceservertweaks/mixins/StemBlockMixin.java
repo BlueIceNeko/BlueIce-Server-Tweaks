@@ -9,7 +9,7 @@ import top.blueicemiaow.blueiceservertweaks.api.Config;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
 @Mixin(StemBlock.class)
-public class StemBlockMixin {
+public abstract class StemBlockMixin {
     @WrapOperation(
             method = "performBonemeal",
             at = @At(

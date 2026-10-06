@@ -264,6 +264,10 @@ public class TranslationHelper {
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Remove crop light restriction", "移除作物光照限制"}
         ));
+        add(Config.remove_mushroom_light_restriction, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Remove mushroom light restriction", "移除蘑菇光照限制"}
+        ));
         add(Config.remove_player_movement_bound, new Translation(
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Remove player movement bound", "移除玩家移动边界"}
@@ -331,6 +335,14 @@ public class TranslationHelper {
         add(Config.powerful_bone_meal, new Translation(
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"More powerful bone meal", "更强大的骨粉"}
+        ));
+        add(Config.bonemealable_cactus, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Bone meal can perform on cactus", "骨粉可催熟仙人掌"}
+        ));
+        add(Config.bonemealable_sugar_cane, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Bone meal can perform on sugar cane", "骨粉可催熟甘蔗"}
         ));
         add(Config.hoe_harvest_crop, new Translation(
                 new String[] {"en_us", "zh_cn"},

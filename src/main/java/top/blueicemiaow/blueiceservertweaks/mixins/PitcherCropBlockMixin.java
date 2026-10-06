@@ -12,7 +12,7 @@ import top.blueicemiaow.blueiceservertweaks.api.Config;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
 @Mixin(PitcherCropBlock.class)
-public class PitcherCropBlockMixin {
+public abstract class PitcherCropBlockMixin {
     @WrapOperation(
             method = "performBonemeal",
             at = @At(

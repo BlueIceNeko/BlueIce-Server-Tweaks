@@ -26,6 +26,7 @@ public class Config {
     public static final String prevent_cushion_item_entity_produce_vibration = "prevent_cushion_item_entity_produce_vibration";
     public static final String remove_enchantment_power_limit = "remove_enchantment_power_limit";
     public static final String remove_crop_light_restriction = "remove_crop_light_restriction";
+    public static final String remove_mushroom_light_restriction = "remove_mushroom_light_restriction";
     public static final String remove_player_movement_bound = "remove_player_movement_bound";
     public static final String tripwire_hook_fix = "tripwire_hook_fix";
     public static final String respawn_immunity_fix = "respawn_immunity_fix";
@@ -43,6 +44,8 @@ public class Config {
     public static final String larger_beacon_range = "larger_beacon_range";
     public static final String armor_stand_show_arms = "armor_stand_show_arms";
     public static final String powerful_bone_meal = "powerful_bone_meal";
+    public static final String bonemealable_cactus = "bonemealable_cactus";
+    public static final String bonemealable_sugar_cane = "bonemealable_sugar_cane";
     public static final String hoe_harvest_crop = "hoe_harvest_crop";
     public static final String hoe_recycle_ender_eye = "hoe_recycle_ender_eye";
     public static final String hoe_collect_block = "hoe_collect_block";
@@ -52,7 +55,6 @@ public class Config {
 
     public static final HashSet<String> experiments = new HashSet<>(Set.of(
             enhanced_end_portal,
-            hoe_collect_block,
             chiseled_bookshelf_provide_enchantment_power
     ));
 
@@ -80,6 +82,7 @@ public class Config {
                     Map.entry(prevent_cushion_item_entity_produce_vibration, false),
                     Map.entry(remove_enchantment_power_limit, false),
                     Map.entry(remove_crop_light_restriction, false),
+                    Map.entry(remove_mushroom_light_restriction, false),
                     Map.entry(remove_player_movement_bound, false),
                     Map.entry(tripwire_hook_fix, false),
                     Map.entry(respawn_immunity_fix, false),
@@ -97,6 +100,8 @@ public class Config {
                     Map.entry(larger_beacon_range, false),
                     Map.entry(armor_stand_show_arms, false),
                     Map.entry(powerful_bone_meal, false),
+                    Map.entry(bonemealable_cactus, false),
+                    Map.entry(bonemealable_sugar_cane, false),
                     Map.entry(hoe_harvest_crop, false),
                     Map.entry(hoe_recycle_ender_eye, false),
                     Map.entry(hoe_collect_block, false),

@@ -9,7 +9,7 @@ import top.blueicemiaow.blueiceservertweaks.api.Config;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
 @Mixin(SweetBerryBushBlock.class)
-public class SweetBerryBushBlockMixin {
+public abstract class SweetBerryBushBlockMixin {
     @WrapOperation(
             method = "performBonemeal",
             at = @At(

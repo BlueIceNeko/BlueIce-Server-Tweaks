@@ -10,6 +10,7 @@ import top.blueicemiaow.blueiceservertweaks.api.Config;
 import top.blueicemiaow.blueiceservertweaks.commands.lvl0.*;
 import top.blueicemiaow.blueiceservertweaks.commands.lvl2.*;
 import top.blueicemiaow.blueiceservertweaks.commands.lvl3.*;
+import top.blueicemiaow.blueiceservertweaks.gameplay.BoneMeal;
 import top.blueicemiaow.blueiceservertweaks.gameplay.FletchingTable;
 import top.blueicemiaow.blueiceservertweaks.gameplay.Hoe;
 import top.blueicemiaow.blueiceservertweaks.gameplay.RespawnImmunity;
@@ -43,12 +44,13 @@ public class Register {
     }
 
     public static void events() {
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> hand == player.getUsedItemHand() && FletchingTable.tipArrow(player, level, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> hand == player.getUsedItemHand() && FletchingTable.setStew(player, level, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> hand == player.getUsedItemHand() && FletchingTable.modifyCrossbow(player, level, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> hand == player.getUsedItemHand() && Hoe.harvestCrop(player, level, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> hand == player.getUsedItemHand() && Hoe.recycleEye(player, level, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> hand == player.getUsedItemHand() && Hoe.collectBlock(player, level, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
+        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> FletchingTable.tipArrow(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
+        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> FletchingTable.setStew(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
+        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> FletchingTable.modifyCrossbow(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
+        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> Hoe.harvestCrop(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
+        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> Hoe.recycleEye(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
+        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> Hoe.collectBlock(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
+        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> BoneMeal.perform(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
     }
 
     public static void tick() {

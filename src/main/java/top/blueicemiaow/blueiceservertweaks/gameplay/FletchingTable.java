@@ -26,7 +26,7 @@ import java.util.Arrays;
 import java.util.Optional;
 
 public class FletchingTable {
-    public static boolean setStew(Player entity, Level level, BlockPos pos) {
+    public static boolean setStew(Player entity, Level level, InteractionHand hand, BlockPos pos) {
         if (ConfigHelper.get(Config.fletching_table_set_stew) && check(entity, level, pos)) {
             ServerPlayer player = (ServerPlayer) entity;
             ItemStack mainHand = player.getMainHandItem().copy();
@@ -58,7 +58,7 @@ public class FletchingTable {
         return false;
     }
 
-    public static boolean tipArrow(Player entity, Level level, BlockPos pos) {
+    public static boolean tipArrow(Player entity, Level level, InteractionHand hand, BlockPos pos) {
         if (ConfigHelper.get(Config.fletching_table_tip_arrow) && check(entity, level, pos)) {
             ServerPlayer player = (ServerPlayer) entity;
             ItemStack mainHand = player.getMainHandItem().copy();
@@ -87,7 +87,7 @@ public class FletchingTable {
         return false;
     }
 
-    public static boolean modifyCrossbow(Player entity, Level level, BlockPos pos) {
+    public static boolean modifyCrossbow(Player entity, Level level, InteractionHand hand, BlockPos pos) {
         if (check(entity, level, pos)) {
             ServerPlayer player = (ServerPlayer) entity;
             if (player.getMainHandItem().is(Items.CROSSBOW)) {

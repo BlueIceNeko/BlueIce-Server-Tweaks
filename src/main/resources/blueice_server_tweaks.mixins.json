@@ -21,6 +21,7 @@
     "SweetBerryBushBlockMixin",
     "CocoaBlockMixin",
     "PitcherCropBlockMixin",
+    "SeaPickleBlockMixin",
     "SaplingBlockMixin",
     "MushroomBlockMixin",
     "EnderEyeItemMixin",

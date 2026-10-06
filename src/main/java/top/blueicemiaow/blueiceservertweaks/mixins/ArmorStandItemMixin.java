@@ -13,7 +13,7 @@ import top.blueicemiaow.blueiceservertweaks.api.Config;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
 @Mixin(ArmorStandItem.class)
-public class ArmorStandItemMixin {
+public abstract class ArmorStandItemMixin {
     @Inject(
             method = "useOn",
             at = @At(
