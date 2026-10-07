@@ -9,12 +9,15 @@
       "name": "BlueIceNeko",
       "contact": {
         "homepage": "https://modrinth.com/user/BlueIceNeko",
+        "sources": "https://github.com/BlueIceNeko",
         "email": "blueiceneko@tutamail.com"
       }
     }
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/blueice-server-tweaks"
+    "homepage": "https://modrinth.com/mod/blueice-server-tweaks",
+    "sources": "https://github.com/BlueIceNeko/BlueIce-Server-Tweaks",
+    "issues": "https://github.com/BlueIceNeko/BlueIce-Server-Tweaks/issues"
   },
   "license": "GPL-3.0-only",
   "icon": "assets/blueice_server_tweaks/icon.png",

@@ -33,9 +33,7 @@ public class BlueIceServerTweaks implements ModInitializer {
     public static final TagKey<Item> PIGLIN_SAFE_ARMOR = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "piglin_safe_armor"));
 
     public static Config config = null;
-    public static HashMap<String, HashMap<String, Boolean>> permissions = new HashMap<>();
-    public static HashMap<String, LoggerWrapper> wrappers = new HashMap<>();
-    public static HashMap<BlockPos, Integer> bookshelfBooks = new HashMap<>();
+    public static final HashMap<String, HashMap<String, Boolean>> permissions = new HashMap<>();
 
     @Override
     public void onInitialize() {

@@ -17,5 +17,5 @@ public class RespawnImmunity {
         }
     }
 
-    public static HashMap<ServerPlayer, Integer> map = new HashMap<>();
+    public static final HashMap<ServerPlayer, Integer> map = new HashMap<>();
 }

@@ -20,7 +20,7 @@ public class Register {
         // OP level 3
         CommandRegistrationCallback.EVENT.register(BIST::register);
         CommandRegistrationCallback.EVENT.register(GetInfos::register);
-        CommandRegistrationCallback.EVENT.register(Logger::register);
+        CommandRegistrationCallback.EVENT.register(LoggerCommand::register);
         CommandRegistrationCallback.EVENT.register(SetPermission::register);
 
         //OP level 2

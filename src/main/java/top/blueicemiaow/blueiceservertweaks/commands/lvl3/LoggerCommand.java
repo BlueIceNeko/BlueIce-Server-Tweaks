@@ -7,19 +7,21 @@ import net.minecraft.commands.CommandBuildContext;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.world.entity.Entity;
-import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import top.blueicemiaow.blueiceservertweaks.api.LoggerWrapper;
 import top.blueicemiaow.blueiceservertweaks.tools.CommandHelper;
 
-public class Logger {
+import java.util.HashMap;
+
+public class LoggerCommand {
+    public static final Logger logger = LogManager.getLogger();
+    public static final LoggerWrapper console = new LoggerWrapper(logger, "CONSOLE");
+    public static final HashMap<String, LoggerWrapper> wrappers = new HashMap<>();
+
     public static LoggerWrapper getWrapper(CommandContext<CommandSourceStack> arguments) {
-        String info = arguments.getSource().getEntity() instanceof Entity entity ? CommandHelper.getEntityInfos(entity) : "CONSOLE";
-        if (BlueIceServerTweaks.wrappers.containsKey(info)) {
-            return BlueIceServerTweaks.wrappers.get(info);
-        }
-        LoggerWrapper wrapper = new LoggerWrapper(BlueIceServerTweaks.LOGGER, info);
-        BlueIceServerTweaks.wrappers.put(info, wrapper);
-        return wrapper;
+        Entity entity = arguments.getSource().getEntity();
+        return entity == null ? console : wrappers.computeIfAbsent(CommandHelper.getEntityInfos(entity), info -> new LoggerWrapper(logger, info));
     }
 
     public static String getLog(CommandContext<CommandSourceStack> arguments) {

@@ -27,7 +27,7 @@ public class Hoe {
                 Block.getDrops(state, world, pos, null, player, player.getItemInHand(hand)).forEach(player::addItem);
                 player.getInventory().setChanged();
                 block.spawnDestroyParticles(world, pos, state);
-                world.setBlock(pos, state.setValue(CropBlock.AGE, 0), 2);
+                world.setBlock(pos, state.setValue(crop instanceof BeetrootBlock ? BeetrootBlock.AGE : CropBlock.AGE, 0), 2);
                 return true;
             }
         }
