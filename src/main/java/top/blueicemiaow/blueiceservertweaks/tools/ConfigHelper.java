@@ -53,6 +53,16 @@ public class ConfigHelper {
     }
 
     public static void write() {
+        Path path = Paths.get(PREFIX);
+        if (!Files.exists(path)) {
+            try {
+                Files.createDirectory(path);
+            } catch (IOException e) {
+                BlueIceServerTweaks.WRAPPER.error(CFG_CREATE_FATAL);
+                e.printStackTrace();
+                return;
+            }
+        }
         Path file = Paths.get(CFG);
         if (!Files.exists(file)) {
             try {

@@ -8,8 +8,8 @@ import net.minecraft.world.damagesource.DamageSource;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
-import top.blueicemiaow.blueiceservertweaks.gameplay.RespawnImmunity;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
+import top.blueicemiaow.blueiceservertweaks.tools.Tick;
 
 @Mixin(ServerPlayer.class)
 public abstract class ServerPlayerMixin {
@@ -21,6 +21,6 @@ public abstract class ServerPlayerMixin {
         )
     )
     private boolean hurtServer(ServerPlayer instance, ServerLevel level, DamageSource damageSource, Operation<Boolean> original) {
-        return ConfigHelper.get(Config.respawn_immunity_fix) && RespawnImmunity.map.containsKey(instance) || original.call(instance, level, damageSource);
+        return ConfigHelper.get(Config.respawn_immunity_fix) && Tick.respawnImmunity.containsKey(instance.getUUID()) || original.call(instance, level, damageSource);
     }
 }

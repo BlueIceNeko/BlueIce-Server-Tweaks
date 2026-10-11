@@ -1,7 +1,6 @@
 package top.blueicemiaow.blueiceservertweaks;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
@@ -16,6 +15,7 @@ import top.blueicemiaow.blueiceservertweaks.tools.Register;
 import top.blueicemiaow.blueiceservertweaks.tools.TranslationHelper;
 
 import java.util.HashMap;
+import java.util.UUID;
 
 public class BlueIceServerTweaks implements ModInitializer {
     public static final String MODID = "blueice_server_tweaks";
@@ -33,7 +33,7 @@ public class BlueIceServerTweaks implements ModInitializer {
     public static final TagKey<Item> PIGLIN_SAFE_ARMOR = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "piglin_safe_armor"));
 
     public static Config config = null;
-    public static final HashMap<String, HashMap<String, Boolean>> permissions = new HashMap<>();
+    public static final HashMap<UUID, HashMap<String, Boolean>> permissions = new HashMap<>();
 
     @Override
     public void onInitialize() {

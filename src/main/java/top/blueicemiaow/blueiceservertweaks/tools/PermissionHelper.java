@@ -20,66 +20,29 @@ public class PermissionHelper {
     public static final String PERM_READ_FATAL = "Unable to read permission file!";
     public static final String PERM_WRITE_FATAL = "Unable to write permission file!";
 
-    public static void trim(HashMap<String, Boolean> permission) {
-        for (String command : permission.keySet()) {
-            if (!Lists.commands.contains(command)) {
-                permission.remove(command);
-            }
-        }
-    }
-
     public static boolean check(ServerPlayer player, String command) {
         return !ConfigHelper.get(Config.permission_system) || Commands.hasPermission(Commands.LEVEL_GAMEMASTERS).test(player.createCommandSourceStack()) || get(player, command);
     }
 
     public static boolean get(ServerPlayer player, String command) {
-        return get(CommandHelper.getEntityInfos(player), command);
+        init(player);
+        return BlueIceServerTweaks.permissions.get(player.getUUID()).getOrDefault(command, false);
     }
 
     public static void set(ServerPlayer player, String command, boolean permission) {
-        set(CommandHelper.getEntityInfos(player), command, permission);
+        init(player);
+        BlueIceServerTweaks.permissions.get(player.getUUID()).put(command, permission);
+        write(player);
     }
 
     public static void init(ServerPlayer player) {
-        init(CommandHelper.getEntityInfos(player));
-    }
-
-    public static Path file(ServerPlayer player) {
-        return file(CommandHelper.getEntityInfos(player));
-    }
-
-    public static void read(ServerPlayer player) {
-        read(CommandHelper.getEntityInfos(player));
-    }
-
-    public static void write(ServerPlayer player) {
-        write(CommandHelper.getEntityInfos(player));
-    }
-
-    private static boolean get(String info, String command) {
-        init(info);
-        return BlueIceServerTweaks.permissions.get(info).getOrDefault(command, false);
-    }
-
-    private static void set(String info, String command, boolean permission) {
-        init(info);
-        BlueIceServerTweaks.permissions.get(info).put(command, permission);
-        trim(BlueIceServerTweaks.permissions.get(info));
-        write(info);
-    }
-
-    private static void init(String info) {
-        if (!BlueIceServerTweaks.permissions.containsKey(info)) {
-            read(info);
+        if (!BlueIceServerTweaks.permissions.containsKey(player.getUUID())) {
+            read(player);
         }
     }
 
-    private static Path file(String info) {
-        return Paths.get("%s/%s%s".formatted(PREFIX, info, SUFFIX));
-    }
-
     @SuppressWarnings("unchecked")
-    private static void read(String info) {
+    public static void read(ServerPlayer player) {
         Path path = Paths.get(PREFIX);
         if (!Files.exists(path)) {
             try {
@@ -90,14 +53,15 @@ public class PermissionHelper {
                 return;
             }
         }
-        Path file = file(info);
+        String info = CommandHelper.getEntityInfos(player);
+        Path file = Paths.get("%s/%s%s".formatted(PREFIX, info, SUFFIX));
         if (!Files.exists(file)) {
             HashMap<String, Boolean> permission = new HashMap<>();
             for (String command : Lists.commands) {
                 permission.put(command, false);
             }
-            BlueIceServerTweaks.permissions.put(info, permission);
-            write(info);
+            BlueIceServerTweaks.permissions.put(player.getUUID(), permission);
+            write(player);
         }
         String json;
         try {
@@ -108,12 +72,22 @@ public class PermissionHelper {
             return;
         }
         Gson gson = new Gson();
-        BlueIceServerTweaks.permissions.put(info, gson.fromJson(json, HashMap.class));
-        trim(BlueIceServerTweaks.permissions.get(info));
+        BlueIceServerTweaks.permissions.put(player.getUUID(), gson.fromJson(json, HashMap.class));
     }
 
-    private static void write(String info) {
-        Path file = file(info);
+    public static void write(ServerPlayer player) {
+        Path path = Paths.get(PREFIX);
+        if (!Files.exists(path)) {
+            try {
+                Files.createDirectory(path);
+            } catch (IOException e) {
+                BlueIceServerTweaks.WRAPPER.error(PERM_CREATE_FATAL);
+                e.printStackTrace();
+                return;
+            }
+        }
+        String info = CommandHelper.getEntityInfos(player);
+        Path file = Paths.get("%s/%s%s".formatted(PREFIX, info, SUFFIX));
         if (!Files.exists(file)) {
             try {
                 Files.createFile(file);
@@ -124,7 +98,7 @@ public class PermissionHelper {
             }
         }
         Gson gson = new Gson();
-        String json = gson.toJson(BlueIceServerTweaks.permissions.get(info));
+        String json = gson.toJson(BlueIceServerTweaks.permissions.get(player.getUUID()));
         try {
             Files.writeString(file, json);
         } catch (IOException e) {

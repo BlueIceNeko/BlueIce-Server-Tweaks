@@ -10,10 +10,7 @@ import top.blueicemiaow.blueiceservertweaks.api.Config;
 import top.blueicemiaow.blueiceservertweaks.commands.lvl0.*;
 import top.blueicemiaow.blueiceservertweaks.commands.lvl2.*;
 import top.blueicemiaow.blueiceservertweaks.commands.lvl3.*;
-import top.blueicemiaow.blueiceservertweaks.gameplay.BoneMeal;
-import top.blueicemiaow.blueiceservertweaks.gameplay.FletchingTable;
-import top.blueicemiaow.blueiceservertweaks.gameplay.Hoe;
-import top.blueicemiaow.blueiceservertweaks.gameplay.RespawnImmunity;
+import top.blueicemiaow.blueiceservertweaks.gameplay.*;
 
 public class Register {
     public static void commands() {
@@ -54,8 +51,7 @@ public class Register {
     }
 
     public static void tick() {
-        ServerTickEvents.END_LEVEL_TICK.register(K::tick);
-        ServerTickEvents.END_LEVEL_TICK.register(RespawnImmunity::tick);
+        ServerTickEvents.END_LEVEL_TICK.register(Tick::tick);
     }
 
     public static void post() {

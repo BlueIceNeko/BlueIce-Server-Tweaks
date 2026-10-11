@@ -11,8 +11,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
-import top.blueicemiaow.blueiceservertweaks.gameplay.RespawnImmunity;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
+import top.blueicemiaow.blueiceservertweaks.tools.Tick;
 
 @Mixin(ServerLevel.class)
 public abstract class ServerLevelMixin {
@@ -27,7 +27,7 @@ public abstract class ServerLevelMixin {
     @Inject(method = "addPlayer", at = @At("HEAD"))
     private void addPlayer(ServerPlayer player, CallbackInfo ci) {
         if (ConfigHelper.get(Config.respawn_immunity_fix)) {
-            RespawnImmunity.map.put(player, 60);
+            Tick.respawnImmunity.put(player.getUUID(), 60);
         }
     }
 }

@@ -40,10 +40,7 @@ public class CommandHelper {
     }
 
     public static String getEntityInfos(Entity entity) {
-        if (entity == null) {
-            return "";
-        }
-        return "%s(%s)".formatted(entity.getDisplayName().getString(), entity.getStringUUID());
+        return entity == null ? "" : "%s(%s)".formatted(entity.getDisplayName().getString(), entity.getStringUUID());
     }
 
     public static String getLocationString(BlockPos location) {

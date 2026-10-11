@@ -15,13 +15,13 @@ import top.blueicemiaow.blueiceservertweaks.tools.CommandHelper;
 import java.util.HashMap;
 
 public class LoggerCommand {
-    public static final Logger logger = LogManager.getLogger();
-    public static final LoggerWrapper console = new LoggerWrapper(logger, "CONSOLE");
+    public static final Logger LOGGER = LogManager.getLogger();
+    public static final LoggerWrapper CONSOLE = new LoggerWrapper(LOGGER, "CONSOLE");
     public static final HashMap<String, LoggerWrapper> wrappers = new HashMap<>();
 
     public static LoggerWrapper getWrapper(CommandContext<CommandSourceStack> arguments) {
         Entity entity = arguments.getSource().getEntity();
-        return entity == null ? console : wrappers.computeIfAbsent(CommandHelper.getEntityInfos(entity), info -> new LoggerWrapper(logger, info));
+        return entity == null ? CONSOLE : wrappers.computeIfAbsent(CommandHelper.getEntityInfos(entity), info -> new LoggerWrapper(LOGGER, info));
     }
 
     public static String getLog(CommandContext<CommandSourceStack> arguments) {
