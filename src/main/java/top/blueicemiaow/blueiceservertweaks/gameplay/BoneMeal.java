@@ -5,19 +5,22 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
 public class BoneMeal {
-    public static boolean perform(Player entity, Level level, InteractionHand hand, BlockPos pos) {
+    public static InteractionResult perform(Player entity, Level level, InteractionHand hand, BlockHitResult hitResult) {
         if (check(entity, level, hand)) {
             ServerLevel world = (ServerLevel) level;
+            BlockPos pos = hitResult.getBlockPos();
             BlockState state = world.getBlockState(pos);
             if (ConfigHelper.get(Config.bonemealable_cactus) && state.is(Blocks.CACTUS)
                     || ConfigHelper.get(Config.bonemealable_sugar_cane) && state.is(Blocks.SUGAR_CANE)) {
@@ -43,13 +46,13 @@ public class BoneMeal {
                             player.getItemInHand(hand).shrink(1);
                             player.getInventory().setChanged();
                         }
-                        return true;
+                        return InteractionResult.SUCCESS_SERVER;
                     }
                     break;
                 }
             }
         }
-        return false;
+        return InteractionResult.PASS;
     }
 
     public static boolean check(Player entity, Level level, InteractionHand hand) {

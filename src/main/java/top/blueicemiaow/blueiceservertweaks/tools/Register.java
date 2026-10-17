@@ -41,13 +41,13 @@ public class Register {
     }
 
     public static void events() {
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> FletchingTable.tipArrow(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> FletchingTable.setStew(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> FletchingTable.modifyCrossbow(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> Hoe.harvestCrop(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> Hoe.recycleEye(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> Hoe.collectBlock(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
-        UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> BoneMeal.perform(player, level, hand, hitResult.getBlockPos()) ? InteractionResult.SUCCESS_SERVER : InteractionResult.PASS);
+        UseBlockCallback.EVENT.register(FletchingTable::tipArrow);
+        UseBlockCallback.EVENT.register(FletchingTable::setStew);
+        UseBlockCallback.EVENT.register(FletchingTable::modifyCrossbow);
+        UseBlockCallback.EVENT.register(Hoe::harvestCrop);
+        UseBlockCallback.EVENT.register(Hoe::recycleEye);
+        UseBlockCallback.EVENT.register(Hoe::collectBlock);
+        UseBlockCallback.EVENT.register(BoneMeal::perform);
     }
 
     public static void tick() {
