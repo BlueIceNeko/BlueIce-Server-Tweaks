@@ -356,6 +356,18 @@ public class TranslationHelper {
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Specified block can be collected using hoes", "特定方块可用锄收集"}
         ));
+        add(Config.tnt_arrow, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"TNT as payload of arrows", "TNT作为箭的载荷"}
+        ));
+        add(Config.fire_charge_arrow, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Fire charge as payload of arrows", "火焰弹作为箭的载荷"}
+        ));
+        add(Config.ender_pearl_arrow, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Ender pearl as payload of arrows", "末影珍珠作为箭的载荷"}
+        ));
         add(Config.chiseled_bookshelf_provide_enchantment_power, new Translation(
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Chiseled bookshelf can provide enchantment power", "雕纹书架可提供附魔能量"}

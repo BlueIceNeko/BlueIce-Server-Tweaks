@@ -49,6 +49,9 @@ public class Config {
     public static final String hoe_harvest_crop = "hoe_harvest_crop";
     public static final String hoe_recycle_ender_eye = "hoe_recycle_ender_eye";
     public static final String hoe_collect_block = "hoe_collect_block";
+    public static final String tnt_arrow = "tnt_arrow";
+    public static final String fire_charge_arrow = "fire_charge_arrow";
+    public static final String ender_pearl_arrow = "ender_pearl_arrow";
     public static final String chiseled_bookshelf_provide_enchantment_power = "chiseled_bookshelf_provide_enchantment_power";
     public static final String permission_system = "permission_system";
     public static final String sudo = "sudo";
@@ -105,6 +108,9 @@ public class Config {
                     Map.entry(hoe_harvest_crop, false),
                     Map.entry(hoe_recycle_ender_eye, false),
                     Map.entry(hoe_collect_block, false),
+                    Map.entry(tnt_arrow, false),
+                    Map.entry(fire_charge_arrow, false),
+                    Map.entry(ender_pearl_arrow, false),
                     Map.entry(chiseled_bookshelf_provide_enchantment_power, false),
                     Map.entry(permission_system, true),
                     Map.entry(sudo, true)

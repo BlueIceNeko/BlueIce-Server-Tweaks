@@ -32,6 +32,8 @@ public class BlueIceServerTweaks implements ModInitializer {
     public static final TagKey<Item> CAN_DISABLE_SHIELD = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "can_disable_shield"));
     public static final TagKey<Item> PIGLIN_SAFE_ARMOR = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "piglin_safe_armor"));
 
+    public static final HashMap<UUID, Integer> arrowPayloads = new HashMap<>();
+
     public static Config config = null;
     public static final HashMap<UUID, HashMap<String, Boolean>> permissions = new HashMap<>();
 
