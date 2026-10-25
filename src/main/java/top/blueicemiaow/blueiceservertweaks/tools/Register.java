@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
-import net.minecraft.world.InteractionResult;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
 import top.blueicemiaow.blueiceservertweaks.commands.lvl0.*;
 import top.blueicemiaow.blueiceservertweaks.commands.lvl2.*;
@@ -47,7 +46,6 @@ public class Register {
         UseBlockCallback.EVENT.register(Hoe::harvestCrop);
         UseBlockCallback.EVENT.register(Hoe::recycleEye);
         UseBlockCallback.EVENT.register(Hoe::collectBlock);
-        UseBlockCallback.EVENT.register(BoneMeal::perform);
     }
 
     public static void tick() {
@@ -57,7 +55,7 @@ public class Register {
     public static void post() {
         ServerLifecycleEvents.SERVER_STARTING.register(server -> {
             if (ConfigHelper.get(Config.villager_major_positive_fix)) {
-                Post.majorPositive(true);
+                Post.majorPositive(null, true);
             }
         });
         ServerLevelEvents.LOAD.register((server, level) -> {

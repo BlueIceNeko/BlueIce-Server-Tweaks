@@ -28,6 +28,7 @@
     "CrossbowItemMixin",
     "ArmorStandItemMixin",
     "ProjectileWeaponItemMixin",
+    "BoneMealItemMixin",
     "ItemEntityMixin",
     "EndermanMixin",
     "ShulkerMixin",

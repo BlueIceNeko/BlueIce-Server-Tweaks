@@ -1,5 +1,8 @@
 package top.blueicemiaow.blueiceservertweaks.api;
 
+import net.minecraft.server.level.ServerLevel;
+import top.blueicemiaow.blueiceservertweaks.tools.Post;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -56,20 +59,22 @@ public class Config {
     public static final String permission_system = "permission_system";
     public static final String sudo = "sudo";
 
-    public static final HashSet<String> experiments = new HashSet<>(Set.of(
-            enhanced_end_portal,
-            chiseled_bookshelf_provide_enchantment_power
-    ));
+    public static final HashSet<String> experiments = new HashSet<>();
 
     public static final HashSet<String> requiresRestart = new HashSet<>(Set.of(
             permission_system,
             sudo
     ));
 
-    public static final HashSet<String> hasPost = new HashSet<>(Set.of(
-            villager_major_positive_fix,
-            debug_gamerule
+    public static final HashMap<String, PostOperation> posts = new HashMap<>(Map.ofEntries(
+            Map.entry(villager_major_positive_fix, Post::majorPositive),
+            Map.entry(debug_gamerule, Post::debugGamerule)
     ));
+
+    @FunctionalInterface
+    public interface PostOperation {
+        void run(ServerLevel level, boolean enabled);
+    }
 
     public static final Config defaultConfig = new Config(
             new HashMap<>(Map.ofEntries(

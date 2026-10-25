@@ -10,7 +10,6 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
-import top.blueicemiaow.blueiceservertweaks.tools.Post;
 import top.blueicemiaow.blueiceservertweaks.tools.CommandHelper;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 import top.blueicemiaow.blueiceservertweaks.tools.TranslationHelper;
@@ -61,11 +60,8 @@ public class BIST {
         if (Config.requiresRestart.contains(function)) {
             CommandHelper.log(arguments, TranslationHelper.get("require_restart"));
         }
-        if (Config.hasPost.contains(function)) {
-            switch (function) {
-                case Config.villager_major_positive_fix -> Post.majorPositive(enabled);
-                case Config.debug_gamerule -> Post.debugGamerule(arguments.getSource().getLevel(), enabled);
-            }
+        if (Config.posts.get(function) instanceof Config.PostOperation post) {
+            post.run(arguments.getSource().getLevel(), enabled);
         }
     }
 }

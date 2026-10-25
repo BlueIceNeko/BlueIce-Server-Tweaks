@@ -8,7 +8,7 @@ import net.minecraft.world.level.gamerules.GameRules;
 import top.blueicemiaow.blueiceservertweaks.mixins.GossipTypeMixin;
 
 public class Post {
-    public static void majorPositive(boolean enabled) {
+    public static void majorPositive(ServerLevel level, boolean enabled) {
         GossipTypeMixin majorPositive = (GossipTypeMixin) (Object) GossipType.MAJOR_POSITIVE;
         int value = enabled ? 100 : 20;
         majorPositive.setMax(value);

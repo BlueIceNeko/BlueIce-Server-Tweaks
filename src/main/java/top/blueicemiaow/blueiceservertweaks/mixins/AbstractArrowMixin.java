@@ -1,6 +1,7 @@
 package top.blueicemiaow.blueiceservertweaks.mixins;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.LivingEntity;
@@ -12,7 +13,6 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -25,22 +25,21 @@ import java.util.UUID;
 
 @Mixin(AbstractArrow.class)
 public abstract class AbstractArrowMixin {
-    @Shadow
-    protected abstract void onHitBlock(BlockHitResult hitResult);
-
     @Unique
     private void onHit(HitResult hitResult) {
         AbstractArrow arrow = (AbstractArrow) (Object) this;
         UUID uuid = arrow.getUUID();
-        if (arrow.getOwner() instanceof LivingEntity owner && BlueIceServerTweaks.arrowPayloads.containsKey(uuid)) {
+        if (BlueIceServerTweaks.arrowPayloads.containsKey(uuid) && arrow.getOwner() instanceof LivingEntity owner && arrow.level() instanceof ServerLevel level) {
             int payload = BlueIceServerTweaks.arrowPayloads.get(uuid);
             if (ConfigHelper.get(Config.tnt_arrow) && payload == 0) {
                 Vec3 pos = arrow.position();
-                arrow.level().explode(owner, pos.x, pos.y, pos.z, 4f, Level.ExplosionInteraction.BLOCK);
+                level.explode(owner, pos.x, pos.y, pos.z, 4f, Level.ExplosionInteraction.BLOCK);
+                if (hitResult instanceof BlockHitResult) {
+                    arrow.kill(level);
+                }
             } else if (ConfigHelper.get(Config.fire_charge_arrow) && payload == 1) {
                 if (hitResult instanceof BlockHitResult blockHitResult) {
                     BlockPos pos = blockHitResult.getBlockPos().relative(blockHitResult.getDirection());
-                    Level level = arrow.level();
                     if (level.getBlockState(pos).is(BlockTags.REPLACEABLE)) {
                         level.setBlockAndUpdate(pos, Blocks.FIRE.defaultBlockState());
                     }
