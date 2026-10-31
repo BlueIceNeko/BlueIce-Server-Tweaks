@@ -10,18 +10,16 @@ import net.minecraft.world.entity.Entity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import top.blueicemiaow.blueiceservertweaks.api.LoggerWrapper;
+import top.blueicemiaow.blueiceservertweaks.api.References;
 import top.blueicemiaow.blueiceservertweaks.tools.CommandHelper;
-
-import java.util.HashMap;
 
 public class LoggerCommand {
     public static final Logger LOGGER = LogManager.getLogger();
     public static final LoggerWrapper CONSOLE = new LoggerWrapper(LOGGER, "CONSOLE");
-    public static final HashMap<String, LoggerWrapper> wrappers = new HashMap<>();
 
     public static LoggerWrapper getWrapper(CommandContext<CommandSourceStack> arguments) {
         Entity entity = arguments.getSource().getEntity();
-        return entity == null ? CONSOLE : wrappers.computeIfAbsent(CommandHelper.getEntityInfos(entity), info -> new LoggerWrapper(LOGGER, info));
+        return entity == null ? CONSOLE : References.wrappers.computeIfAbsent(CommandHelper.getEntityInfos(entity), info -> new LoggerWrapper(LOGGER, info));
     }
 
     public static String getLog(CommandContext<CommandSourceStack> arguments) {

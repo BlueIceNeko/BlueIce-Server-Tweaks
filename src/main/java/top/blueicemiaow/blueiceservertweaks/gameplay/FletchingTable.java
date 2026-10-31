@@ -21,13 +21,15 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.BlockHitResult;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
-import top.blueicemiaow.blueiceservertweaks.api.Lists;
+import top.blueicemiaow.blueiceservertweaks.api.References;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
 import java.util.Arrays;
 import java.util.Optional;
 
 public class FletchingTable {
+    public record Stew(String id, int duration) {}
+
     public static InteractionResult setStew(Player entity, Level level, InteractionHand hand, BlockHitResult hitResult) {
         BlockPos pos = hitResult.getBlockPos();
         if (ConfigHelper.get(Config.fletching_table_set_stew) && check(entity, level, pos)) {
@@ -39,8 +41,8 @@ public class FletchingTable {
                     Optional<Holder<Potion>> potion = offHand.get(DataComponents.POTION_CONTENTS).potion();
                     if (potion.isPresent()) {
                         String potionId = potion.get().getRegisteredName();
-                        if (Lists.stews.containsKey(potionId)) {
-                            Lists.Stew stewType = Lists.stews.get(potionId);
+                        if (References.stews.containsKey(potionId)) {
+                            Stew stewType = References.stews.get(potionId);
                             Optional<Holder.Reference<MobEffect>> effect = BuiltInRegistries.MOB_EFFECT.get(Identifier.parse(stewType.id()));
                             if (effect.isPresent()) {
                                 ItemStack stew = new ItemStack(Items.SUSPICIOUS_STEW);

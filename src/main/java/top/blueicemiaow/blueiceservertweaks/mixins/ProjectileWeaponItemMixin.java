@@ -13,15 +13,15 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
+import top.blueicemiaow.blueiceservertweaks.api.References;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
 @Mixin(ProjectileWeaponItem.class)
 public abstract class ProjectileWeaponItemMixin {
     @Unique
     private static void load(LivingEntity shooter, AbstractArrow arrow, int payload) {
-        BlueIceServerTweaks.arrowPayloads.put(arrow.getUUID(), payload);
+        References.arrowPayloads.put(arrow.getUUID(), payload);
         if (shooter instanceof ServerPlayer player) {
             if (!player.gameMode().isCreative()) {
                 player.getOffhandItem().shrink(1);

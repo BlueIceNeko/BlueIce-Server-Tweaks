@@ -12,9 +12,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
+import top.blueicemiaow.blueiceservertweaks.api.References;
 import top.blueicemiaow.blueiceservertweaks.commands.lvl0.Fly;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
-import top.blueicemiaow.blueiceservertweaks.tools.Tick;
 
 @Mixin(ServerLevel.class)
 public abstract class ServerLevelMixin {
@@ -29,7 +29,7 @@ public abstract class ServerLevelMixin {
     @Inject(method = "addPlayer", at = @At("HEAD"))
     private void addPlayer(ServerPlayer player, CallbackInfo ci) {
         if (ConfigHelper.get(Config.respawn_immunity_fix)) {
-            Tick.respawnImmunity.put(player.getUUID(), 60);
+            References.respawnImmunity.put(player.getUUID(), 60);
         }
         Fly.update(player);
     }

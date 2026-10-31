@@ -14,8 +14,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
+import top.blueicemiaow.blueiceservertweaks.api.Tags;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
 public class Hoe {
@@ -60,7 +60,7 @@ public class Hoe {
             ServerLevel world = (ServerLevel) level;
             BlockPos pos = hitResult.getBlockPos();
             BlockState state = world.getBlockState(pos);
-            if (state.is(BlueIceServerTweaks.COLLECTABLE)) {
+            if (state.is(Tags.COLLECTABLE)) {
                 ServerPlayer player = (ServerPlayer) entity;
                 if (state.is(BlockTags.SHULKER_BOXES)) {
                     Block.getDrops(state, world, pos, world.getBlockEntity(pos)).forEach(player::addItem);

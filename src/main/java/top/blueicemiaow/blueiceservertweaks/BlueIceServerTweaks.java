@@ -24,18 +24,7 @@ public class BlueIceServerTweaks implements ModInitializer {
     public static final LoggerWrapper WRAPPER = new LoggerWrapper(LOGGER, PREFIX);
     public static final String WILDCARD = "*";
 
-    public static final TagKey<Block> EMPTY_BLOCK = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MODID, "empty"));
-    public static final TagKey<Block> ENCHANTMENT_POWER_PROVIDER = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MODID, "enchantment_power_provider"));
-    public static final TagKey<Block> COLLECTABLE = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(MODID, "collectable"));
-
-    public static final TagKey<Item> EMPTY_ITEM = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "empty"));
-    public static final TagKey<Item> CAN_DISABLE_SHIELD = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "can_disable_shield"));
-    public static final TagKey<Item> PIGLIN_SAFE_ARMOR = TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MODID, "piglin_safe_armor"));
-
-    public static final HashMap<UUID, Integer> arrowPayloads = new HashMap<>();
-
     public static Config config = null;
-    public static final HashMap<UUID, HashMap<String, Boolean>> permissions = new HashMap<>();
 
     @Override
     public void onInitialize() {

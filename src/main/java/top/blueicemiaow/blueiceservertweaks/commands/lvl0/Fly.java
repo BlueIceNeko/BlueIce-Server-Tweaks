@@ -7,22 +7,21 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.server.level.ServerPlayer;
 import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
+import top.blueicemiaow.blueiceservertweaks.api.References;
 import top.blueicemiaow.blueiceservertweaks.tools.CommandHelper;
 import top.blueicemiaow.blueiceservertweaks.tools.PermissionHelper;
 import top.blueicemiaow.blueiceservertweaks.tools.TranslationHelper;
 
-import java.util.HashSet;
 import java.util.UUID;
 
 public class Fly {
-    public static final HashSet<UUID> fly = new HashSet<>();
 
     public static void set(ServerPlayer player, boolean enabled) {
         UUID uuid = player.getUUID();
         if (enabled) {
-            fly.add(uuid);
+            References.fly.add(uuid);
         } else {
-            fly.remove(uuid);
+            References.fly.remove(uuid);
         }
         update(player, enabled);
     }
@@ -41,7 +40,7 @@ public class Fly {
     }
 
     public static void update(ServerPlayer player) {
-        update(player, PermissionHelper.check(player, "fly") && Fly.fly.contains(player.getUUID()));
+        update(player, PermissionHelper.check(player, "fly") && References.fly.contains(player.getUUID()));
     }
 
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher, CommandBuildContext commandBuildContext, Commands.CommandSelection environment) {

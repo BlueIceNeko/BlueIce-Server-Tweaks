@@ -15,20 +15,15 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
+import top.blueicemiaow.blueiceservertweaks.api.References;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
-
-import java.util.HashMap;
 
 @Mixin(BoneMealItem.class)
 public abstract class BoneMealItemMixin {
-    @Unique
-    private static final HashMap<BlockPos, BlockPos> particlePos = new HashMap<>();
-
     @WrapMethod(method = "growCrop")
     private static boolean growCrop(ItemStack itemStack, Level level, BlockPos pos, Operation<Boolean> original) {
         if (level instanceof ServerLevel world) {
@@ -53,7 +48,7 @@ public abstract class BoneMealItemMixin {
                     if (newState.is(BlockTags.REPLACEABLE)) {
                         world.setBlockAndUpdate(newPos, block.defaultBlockState());
                         itemStack.shrink(1);
-                        particlePos.put(pos, newPos);
+                        References.bonemealPos.put(pos, newPos);
                         return true;
                     }
                     break;
@@ -65,9 +60,9 @@ public abstract class BoneMealItemMixin {
 
     @Inject(method = "addGrowthParticles", at = @At("TAIL"))
     private static void addGrowthParticles(LevelAccessor level, BlockPos pos, int count, CallbackInfo ci) {
-        if (particlePos.containsKey(pos)) {
-            ParticleUtils.spawnParticleInBlock(level, particlePos.get(pos), count, ParticleTypes.HAPPY_VILLAGER);
-            particlePos.remove(pos);
+        if (References.bonemealPos.containsKey(pos)) {
+            ParticleUtils.spawnParticleInBlock(level, References.bonemealPos.get(pos), count, ParticleTypes.HAPPY_VILLAGER);
+            References.bonemealPos.remove(pos);
         }
     }
 }

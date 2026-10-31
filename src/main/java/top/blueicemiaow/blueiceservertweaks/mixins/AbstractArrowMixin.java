@@ -17,8 +17,8 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
+import top.blueicemiaow.blueiceservertweaks.api.References;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
 import java.util.UUID;
@@ -29,8 +29,8 @@ public abstract class AbstractArrowMixin {
     private void onHit(HitResult hitResult) {
         AbstractArrow arrow = (AbstractArrow) (Object) this;
         UUID uuid = arrow.getUUID();
-        if (BlueIceServerTweaks.arrowPayloads.containsKey(uuid) && arrow.getOwner() instanceof LivingEntity owner && arrow.level() instanceof ServerLevel level) {
-            int payload = BlueIceServerTweaks.arrowPayloads.get(uuid);
+        if (References.arrowPayloads.containsKey(uuid) && arrow.getOwner() instanceof LivingEntity owner && arrow.level() instanceof ServerLevel level) {
+            int payload = References.arrowPayloads.get(uuid);
             if (ConfigHelper.get(Config.tnt_arrow) && payload == 0) {
                 Vec3 pos = arrow.position();
                 level.explode(owner, pos.x, pos.y, pos.z, 4f, Level.ExplosionInteraction.BLOCK);
@@ -53,7 +53,7 @@ public abstract class AbstractArrowMixin {
                     player.connection.teleport(pos.x, pos.y, pos.z, player.getYRot(), player.getXRot());
                 }
             }
-            BlueIceServerTweaks.arrowPayloads.remove(uuid);
+            References.arrowPayloads.remove(uuid);
         }
     }
 

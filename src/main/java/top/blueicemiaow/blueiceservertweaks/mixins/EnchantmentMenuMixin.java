@@ -13,23 +13,18 @@ import net.minecraft.world.level.block.EnchantingTableBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.ChiseledBookShelfBlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Slice;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
+import top.blueicemiaow.blueiceservertweaks.api.References;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
-import java.util.HashMap;
 import java.util.List;
 
 @Mixin(EnchantmentMenu.class)
 public abstract class EnchantmentMenuMixin {
-    @Unique
-    private static final HashMap<BlockPos, Integer> bookCounts = new HashMap<>();
-
     @WrapOperation(
             method = "lambda$slotsChanged$0",
             at = @At(
@@ -73,7 +68,7 @@ public abstract class EnchantmentMenuMixin {
                     }
                 }
             }
-            bookCounts.put(pos, bookCount);
+            References.bookCounts.put(pos, bookCount);
         }
     }
 
@@ -85,13 +80,13 @@ public abstract class EnchantmentMenuMixin {
             )
     )
     private int slotsChanged(RandomSource random, int slot, int bookcases, ItemStack itemStack, Operation<Integer> original, @Local(name = "pos", argsOnly = true) BlockPos pos) {
-        return ConfigHelper.get(Config.chiseled_bookshelf_provide_enchantment_power) ? original.call(random, slot, bookCounts.get(pos) / 3, itemStack) : original.call(random, slot, bookcases, itemStack);
+        return ConfigHelper.get(Config.chiseled_bookshelf_provide_enchantment_power) ? original.call(random, slot, References.bookCounts.get(pos) / 3, itemStack) : original.call(random, slot, bookcases, itemStack);
     }
 
     @Inject(method = "lambda$slotsChanged$0", at = @At("TAIL"))
     private void slotsChangedT(ItemStack itemStack, Level level, BlockPos pos, CallbackInfo ci) {
         if (ConfigHelper.get(Config.chiseled_bookshelf_provide_enchantment_power)) {
-            bookCounts.remove(pos);
+            References.bookCounts.remove(pos);
         }
     }
 }

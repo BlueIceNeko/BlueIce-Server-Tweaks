@@ -5,7 +5,7 @@ import net.minecraft.commands.Commands;
 import net.minecraft.server.level.ServerPlayer;
 import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
-import top.blueicemiaow.blueiceservertweaks.api.Lists;
+import top.blueicemiaow.blueiceservertweaks.api.References;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -26,17 +26,17 @@ public class PermissionHelper {
 
     public static boolean get(ServerPlayer player, String command) {
         init(player);
-        return BlueIceServerTweaks.permissions.get(player.getUUID()).getOrDefault(command, false);
+        return References.permissions.get(player.getUUID()).getOrDefault(command, false);
     }
 
     public static void set(ServerPlayer player, String command, boolean permission) {
         init(player);
-        BlueIceServerTweaks.permissions.get(player.getUUID()).put(command, permission);
+        References.permissions.get(player.getUUID()).put(command, permission);
         write(player);
     }
 
     public static void init(ServerPlayer player) {
-        if (!BlueIceServerTweaks.permissions.containsKey(player.getUUID())) {
+        if (!References.permissions.containsKey(player.getUUID())) {
             read(player);
         }
     }
@@ -56,12 +56,8 @@ public class PermissionHelper {
         String info = CommandHelper.getEntityInfos(player);
         Path file = Paths.get("%s/%s%s".formatted(PREFIX, info, SUFFIX));
         if (!Files.exists(file)) {
-            HashMap<String, Boolean> permission = new HashMap<>();
-            for (String command : Lists.commands) {
-                permission.put(command, false);
-            }
-            BlueIceServerTweaks.permissions.put(player.getUUID(), permission);
-            write(player);
+            References.permissions.put(player.getUUID(), new HashMap<>());
+            return;
         }
         String json;
         try {
@@ -72,7 +68,7 @@ public class PermissionHelper {
             return;
         }
         Gson gson = new Gson();
-        BlueIceServerTweaks.permissions.put(player.getUUID(), gson.fromJson(json, HashMap.class));
+        References.permissions.put(player.getUUID(), gson.fromJson(json, HashMap.class));
     }
 
     public static void write(ServerPlayer player) {
@@ -98,7 +94,7 @@ public class PermissionHelper {
             }
         }
         Gson gson = new Gson();
-        String json = gson.toJson(BlueIceServerTweaks.permissions.get(player.getUUID()));
+        String json = gson.toJson(References.permissions.get(player.getUUID()));
         try {
             Files.writeString(file, json);
         } catch (IOException e) {

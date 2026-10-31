@@ -2,7 +2,7 @@ package top.blueicemiaow.blueiceservertweaks.tools;
 
 import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
-import top.blueicemiaow.blueiceservertweaks.api.Lists;
+import top.blueicemiaow.blueiceservertweaks.api.References;
 import top.blueicemiaow.blueiceservertweaks.api.Translation;
 
 public class TranslationHelper {
@@ -383,24 +383,24 @@ public class TranslationHelper {
     }
 
     public static boolean add(String key, Translation translation) {
-        if (Lists.translations.containsKey(key)) {
+        if (References.translations.containsKey(key)) {
             return false;
         }
-        Lists.translations.put(key, translation);
+        References.translations.put(key, translation);
         return true;
     }
 
     public static boolean del(String key) {
-        if (Lists.translations.containsKey(key)) {
-            Lists.translations.remove(key);
+        if (References.translations.containsKey(key)) {
+            References.translations.remove(key);
             return true;
         }
         return false;
     }
 
     public static String get(String key) {
-        if (Lists.translations.containsKey(key)) {
-            return Lists.translations.get(key).get(BlueIceServerTweaks.config.language);
+        if (References.translations.containsKey(key)) {
+            return References.translations.get(key).get(BlueIceServerTweaks.config.language);
         }
         return key;
     }

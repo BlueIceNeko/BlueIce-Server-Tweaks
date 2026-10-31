@@ -9,7 +9,7 @@ import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.server.level.ServerPlayer;
 import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
-import top.blueicemiaow.blueiceservertweaks.api.Lists;
+import top.blueicemiaow.blueiceservertweaks.api.References;
 import top.blueicemiaow.blueiceservertweaks.tools.CommandHelper;
 import top.blueicemiaow.blueiceservertweaks.tools.PermissionHelper;
 import top.blueicemiaow.blueiceservertweaks.tools.TranslationHelper;
@@ -25,13 +25,13 @@ public class SetPermission {
         LiteralArgumentBuilder<CommandSourceStack> builder = Commands.literal("setperm").requires(Commands.hasPermission(Commands.LEVEL_ADMINS)).then(Commands.argument(PLAYER, EntityArgument.player()).then(Commands.literal(BlueIceServerTweaks.WILDCARD).then(Commands.argument(PERMISSION, BoolArgumentType.bool()).executes(arguments -> {
             ServerPlayer player = EntityArgument.getPlayer(arguments, PLAYER);
             boolean permission = BoolArgumentType.getBool(arguments, PERMISSION);
-            for (String command : Lists.commands) {
+            for (String command : References.commands) {
                 PermissionHelper.set(player, command, permission);
             }
             CommandHelper.log(arguments, "%s%s%s%b".formatted(CommandHelper.getEntityInfos(player), TranslationHelper.get("of_all"), TranslationHelper.get(SET), permission), TranslationHelper.get(UPDATE));
             return 0;
         }))));
-        for (String command : Lists.commands) {
+        for (String command : References.commands) {
             builder.then(Commands.argument(PLAYER, EntityArgument.player()).then(Commands.literal(command).executes(arguments -> {
                 ServerPlayer player = EntityArgument.getPlayer(arguments, PLAYER);
                 CommandHelper.log(arguments, "%s%s%s%s%b".formatted(CommandHelper.getEntityInfos(player), TranslationHelper.get("of"), command, TranslationHelper.get(GET), PermissionHelper.get(player, command)));

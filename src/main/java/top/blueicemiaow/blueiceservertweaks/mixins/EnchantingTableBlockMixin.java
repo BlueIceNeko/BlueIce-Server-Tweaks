@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.EnchantingTableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import top.blueicemiaow.blueiceservertweaks.BlueIceServerTweaks;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
+import top.blueicemiaow.blueiceservertweaks.api.Tags;
 import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 
 @Mixin(EnchantingTableBlock.class)
@@ -35,6 +35,6 @@ public abstract class EnchantingTableBlockMixin {
             )
     )
     private static boolean isValidBookShelf0(BlockState instance, TagKey tagKey, Operation<Boolean> original) {
-        return original.call(instance, tagKey) || ConfigHelper.get(Config.chiseled_bookshelf_provide_enchantment_power) && original.call(instance, BlueIceServerTweaks.ENCHANTMENT_POWER_PROVIDER);
+        return original.call(instance, tagKey) || ConfigHelper.get(Config.chiseled_bookshelf_provide_enchantment_power) && original.call(instance, Tags.ENCHANTMENT_POWER_PROVIDER);
     }
 }
