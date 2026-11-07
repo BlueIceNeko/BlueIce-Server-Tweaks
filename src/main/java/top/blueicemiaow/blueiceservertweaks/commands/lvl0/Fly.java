@@ -15,7 +15,6 @@ import top.blueicemiaow.blueiceservertweaks.tools.TranslationHelper;
 import java.util.UUID;
 
 public class Fly {
-
     public static void set(ServerPlayer player, boolean enabled) {
         UUID uuid = player.getUUID();
         if (enabled) {

@@ -19,8 +19,10 @@ public class Config {
 
     public static final String enhanced_can_disable_shield = "enhanced_can_disable_shield";
     public static final String enhanced_is_wearing_safe_armor = "enhanced_is_wearing_safe_armor";
+    public static final String enhanced_enchanting_exclusion = "enhanced_enchanting_exclusion";
     public static final String enhanced_end_portal = "enhanced_end_portal";
     public static final String prevent_rotten_flesh_drop = "prevent_rotten_flesh_drop";
+    public static final String prevent_poisonous_potato_drop = "prevent_poisonous_potato_drop";
     public static final String prevent_nether_portal_break = "prevent_nether_portal_break";
     public static final String prevent_straw_bed_break = "prevent_straw_bed_break";
     public static final String prevent_copper_oxidize = "prevent_copper_oxidize";
@@ -28,6 +30,7 @@ public class Config {
     public static final String prevent_respawn_point_produce_fire = "prevent_respawn_point_produce_fire";
     public static final String prevent_cushion_item_entity_produce_vibration = "prevent_cushion_item_entity_produce_vibration";
     public static final String remove_enchantment_power_limit = "remove_enchantment_power_limit";
+    public static final String remove_lead_length_limit = "remove_lead_length_limit";
     public static final String remove_crop_light_restriction = "remove_crop_light_restriction";
     public static final String remove_mushroom_light_restriction = "remove_mushroom_light_restriction";
     public static final String remove_player_movement_bound = "remove_player_movement_bound";
@@ -80,8 +83,10 @@ public class Config {
             new HashMap<>(Map.ofEntries(
                     Map.entry(enhanced_can_disable_shield, false),
                     Map.entry(enhanced_is_wearing_safe_armor, false),
+                    Map.entry(enhanced_enchanting_exclusion, false),
                     Map.entry(enhanced_end_portal, false),
                     Map.entry(prevent_rotten_flesh_drop, false),
+                    Map.entry(prevent_poisonous_potato_drop, false),
                     Map.entry(prevent_nether_portal_break, false),
                     Map.entry(prevent_straw_bed_break, false),
                     Map.entry(prevent_copper_oxidize, false),
@@ -89,6 +94,7 @@ public class Config {
                     Map.entry(prevent_respawn_point_produce_fire, false),
                     Map.entry(prevent_cushion_item_entity_produce_vibration, false),
                     Map.entry(remove_enchantment_power_limit, false),
+                    Map.entry(remove_lead_length_limit, false),
                     Map.entry(remove_crop_light_restriction, false),
                     Map.entry(remove_mushroom_light_restriction, false),
                     Map.entry(remove_player_movement_bound, false),

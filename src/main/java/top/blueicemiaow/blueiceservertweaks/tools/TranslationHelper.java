@@ -224,6 +224,10 @@ public class TranslationHelper {
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Enhanced piglin safe armor judgment", "增强的防猪灵盔甲判定"}
         ));
+        add(Config.enhanced_enchanting_exclusion, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Enhanced enchanting exclusion calculation", "增强的附魔台排除计算"}
+        ));
         add(Config.enhanced_end_portal, new Translation(
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Enhanced end portal activation", "增强的末地门激活"}
@@ -231,6 +235,10 @@ public class TranslationHelper {
         add(Config.prevent_rotten_flesh_drop, new Translation(
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Prevent rotten flesh item entity spawn", "阻止腐肉掉落物生成"}
+        ));
+        add(Config.prevent_poisonous_potato_drop, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Prevent poisonous potato item entity spawn", "阻止毒马铃薯掉落物生成"}
         ));
         add(Config.prevent_nether_portal_break, new Translation(
                 new String[] {"en_us", "zh_cn"},
@@ -259,6 +267,10 @@ public class TranslationHelper {
         add(Config.remove_enchantment_power_limit, new Translation(
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Remove enchantment power limit", "移除附魔能量上限"}
+        ));
+        add(Config.remove_lead_length_limit, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Remove lead length limit", "移除拴绳长度上限"}
         ));
         add(Config.remove_crop_light_restriction, new Translation(
                 new String[] {"en_us", "zh_cn"},

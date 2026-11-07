@@ -1,9 +1,9 @@
 package top.blueicemiaow.blueiceservertweaks.gameplay;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -12,7 +12,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import top.blueicemiaow.blueiceservertweaks.api.Config;
 import top.blueicemiaow.blueiceservertweaks.api.Tags;
@@ -30,7 +32,7 @@ public class Hoe {
                 Block.getDrops(state, world, pos, null, player, player.getItemInHand(hand)).forEach(player::addItem);
                 player.getInventory().setChanged();
                 block.spawnDestroyParticles(world, pos, state);
-                world.setBlock(pos, state.setValue(crop instanceof BeetrootBlock ? BeetrootBlock.AGE : CropBlock.AGE, 0), 2);
+                world.setBlock(pos, state.setValue((IntegerProperty) crop.getStateDefinition().getProperty("age"), 0), 2);
                 return InteractionResult.SUCCESS_SERVER;
             }
         }
@@ -62,11 +64,13 @@ public class Hoe {
             BlockState state = world.getBlockState(pos);
             if (state.is(Tags.COLLECTABLE)) {
                 ServerPlayer player = (ServerPlayer) entity;
-                if (state.is(BlockTags.SHULKER_BOXES)) {
-                    Block.getDrops(state, world, pos, world.getBlockEntity(pos)).forEach(player::addItem);
-                } else {
-                    player.addItem(state.getCloneItemStack(world, pos, true));
+                ItemStack item = state.getCloneItemStack(world, pos, true);
+                if (world.getBlockEntity(pos) instanceof BlockEntity blockEntity) {
+                    item.applyComponents(blockEntity.collectComponents());
+                    blockEntity.setComponents(DataComponentMap.EMPTY);
+                    world.removeBlockEntity(pos);
                 }
+                player.addItem(item);
                 player.getInventory().setChanged();
                 world.removeBlock(pos, false);
                 return InteractionResult.SUCCESS_SERVER;

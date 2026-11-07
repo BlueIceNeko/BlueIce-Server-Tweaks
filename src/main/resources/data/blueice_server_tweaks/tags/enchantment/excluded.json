@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bane_of_arthropods",
+    "minecraft:fire_aspect",
+    "minecraft:knockback",
+    "minecraft:thorns",
+    "minecraft:frost_walker",
+    "#minecraft:curse"
+  ]
+}
