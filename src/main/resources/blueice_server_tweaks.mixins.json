@@ -43,6 +43,7 @@
     "EndIslandFunctionMixin",
     "EnchantmentHelperMixin",
     "AnvilMenuMixin",
+    "SmithingMenuMixin",
     "EnchantmentMenuMixin",
     "WeatheringCopperMixin",
     "GossipTypeMixin"

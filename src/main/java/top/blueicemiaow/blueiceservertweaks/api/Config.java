@@ -29,6 +29,7 @@ public class Config {
     public static final String prevent_copper_oxidize = "prevent_copper_oxidize";
     public static final String prevent_farmland_be_trampled = "prevent_farmland_be_trampled";
     public static final String prevent_respawn_point_produce_fire = "prevent_respawn_point_produce_fire";
+    public static final String prevent_template_be_consumed = "prevent_template_be_consumed";
     public static final String prevent_cushion_item_entity_produce_vibration = "prevent_cushion_item_entity_produce_vibration";
     public static final String remove_anvil_damage_limit = "remove_anvil_damage_limit";
     public static final String remove_enchantment_power_limit = "remove_enchantment_power_limit";
@@ -52,6 +53,7 @@ public class Config {
     public static final String carpet_transmit_enchantment_power = "carpet_transmit_enchantment_power";
     public static final String larger_beacon_range = "larger_beacon_range";
     public static final String armor_stand_show_arms = "armor_stand_show_arms";
+    public static final String linear_repair_cost = "linear_repair_cost";
     public static final String powerful_bone_meal = "powerful_bone_meal";
     public static final String bonemealable_cactus = "bonemealable_cactus";
     public static final String bonemealable_sugar_cane = "bonemealable_sugar_cane";
@@ -96,6 +98,7 @@ public class Config {
                     Map.entry(prevent_copper_oxidize, false),
                     Map.entry(prevent_farmland_be_trampled, false),
                     Map.entry(prevent_respawn_point_produce_fire, false),
+                    Map.entry(prevent_template_be_consumed, false),
                     Map.entry(prevent_cushion_item_entity_produce_vibration, false),
                     Map.entry(remove_anvil_damage_limit, false),
                     Map.entry(remove_enchantment_power_limit, false),
@@ -119,6 +122,7 @@ public class Config {
                     Map.entry(carpet_transmit_enchantment_power, false),
                     Map.entry(larger_beacon_range, false),
                     Map.entry(armor_stand_show_arms, false),
+                    Map.entry(linear_repair_cost, false),
                     Map.entry(powerful_bone_meal, false),
                     Map.entry(bonemealable_cactus, false),
                     Map.entry(bonemealable_sugar_cane, false),

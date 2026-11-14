@@ -264,6 +264,10 @@ public class TranslationHelper {
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Prevent bad respawn point produce fire", "阻止无效重生点起火"}
         ));
+        add(Config.prevent_template_be_consumed, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Prevent smithing template be consumed", "阻止锻造模板被消耗"}
+        ));
         add(Config.prevent_cushion_item_entity_produce_vibration, new Translation(
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Prevent cushion item entity produce vibration", "阻止坐垫物品实体震动"}
@@ -350,11 +354,15 @@ public class TranslationHelper {
         ));
         add(Config.larger_beacon_range, new Translation(
                 new String[] {"en_us", "zh_cn"},
-                new String[] {"larger beacon effect range", "更大的信标效果范围"}
+                new String[] {"Larger beacon effect range", "更大的信标效果范围"}
         ));
         add(Config.armor_stand_show_arms, new Translation(
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Armor stand show arms by default", "盔甲架默认展示手臂"}
+        ));
+        add(Config.linear_repair_cost, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Reduce repair cost to linear increase", "累积惩罚降为线性增加"}
         ));
         add(Config.powerful_bone_meal, new Translation(
                 new String[] {"en_us", "zh_cn"},

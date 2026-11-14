@@ -1,5 +1,6 @@
 package top.blueicemiaow.blueiceservertweaks.mixins;
 
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.core.BlockPos;
@@ -26,5 +27,10 @@ public abstract class AnvilMenuMixin {
         if (!ConfigHelper.get(Config.prevent_anvil_break)) {
             original.call(instance, action);
         }
+    }
+
+    @WrapMethod(method = "calculateIncreasedRepairCost")
+    private static int calculateIncreasedRepairCost(int baseCost, Operation<Integer> original) {
+        return ConfigHelper.get(Config.linear_repair_cost) ? baseCost + 1 : original.call(baseCost);
     }
 }
