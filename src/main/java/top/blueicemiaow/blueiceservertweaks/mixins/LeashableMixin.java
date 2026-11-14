@@ -10,7 +10,7 @@ import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 @Mixin(Leashable.class)
 public interface LeashableMixin {
     @ModifyConstant(method = "leashSnapDistance", constant = @Constant(doubleValue = 12))
-    private double removeLeashLengthLimit(double constant) {
+    private double leashSnapDistance(double constant) {
         return ConfigHelper.get(Config.remove_lead_length_limit) ? Double.MAX_VALUE : constant;
     }
 }

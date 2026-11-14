@@ -23,12 +23,14 @@ public class Config {
     public static final String enhanced_end_portal = "enhanced_end_portal";
     public static final String prevent_rotten_flesh_drop = "prevent_rotten_flesh_drop";
     public static final String prevent_poisonous_potato_drop = "prevent_poisonous_potato_drop";
+    public static final String prevent_anvil_break = "prevent_anvil_break";
     public static final String prevent_nether_portal_break = "prevent_nether_portal_break";
     public static final String prevent_straw_bed_break = "prevent_straw_bed_break";
     public static final String prevent_copper_oxidize = "prevent_copper_oxidize";
     public static final String prevent_farmland_be_trampled = "prevent_farmland_be_trampled";
     public static final String prevent_respawn_point_produce_fire = "prevent_respawn_point_produce_fire";
     public static final String prevent_cushion_item_entity_produce_vibration = "prevent_cushion_item_entity_produce_vibration";
+    public static final String remove_anvil_damage_limit = "remove_anvil_damage_limit";
     public static final String remove_enchantment_power_limit = "remove_enchantment_power_limit";
     public static final String remove_lead_length_limit = "remove_lead_length_limit";
     public static final String remove_crop_light_restriction = "remove_crop_light_restriction";
@@ -41,6 +43,7 @@ public class Config {
     public static final String enderman_teleport_fix = "enderman_teleport_fix";
     public static final String shulker_teleport_fix = "shulker_teleport_fix";
     public static final String villager_major_positive_fix = "villager_major_positive_fix";
+    public static final String minecart_drop_fix = "minecart_drop_fix";
     public static final String debug_gamerule = "debug_gamerule";
     public static final String fletching_table_set_stew = "fletching_table_set_stew";
     public static final String fletching_table_tip_arrow = "fletching_table_tip_arrow";
@@ -87,12 +90,14 @@ public class Config {
                     Map.entry(enhanced_end_portal, false),
                     Map.entry(prevent_rotten_flesh_drop, false),
                     Map.entry(prevent_poisonous_potato_drop, false),
+                    Map.entry(prevent_anvil_break, false),
                     Map.entry(prevent_nether_portal_break, false),
                     Map.entry(prevent_straw_bed_break, false),
                     Map.entry(prevent_copper_oxidize, false),
                     Map.entry(prevent_farmland_be_trampled, false),
                     Map.entry(prevent_respawn_point_produce_fire, false),
                     Map.entry(prevent_cushion_item_entity_produce_vibration, false),
+                    Map.entry(remove_anvil_damage_limit, false),
                     Map.entry(remove_enchantment_power_limit, false),
                     Map.entry(remove_lead_length_limit, false),
                     Map.entry(remove_crop_light_restriction, false),
@@ -105,6 +110,7 @@ public class Config {
                     Map.entry(enderman_teleport_fix, false),
                     Map.entry(shulker_teleport_fix, false),
                     Map.entry(villager_major_positive_fix, false),
+                    Map.entry(minecart_drop_fix, false),
                     Map.entry(debug_gamerule, false),
                     Map.entry(fletching_table_set_stew, false),
                     Map.entry(fletching_table_tip_arrow, false),

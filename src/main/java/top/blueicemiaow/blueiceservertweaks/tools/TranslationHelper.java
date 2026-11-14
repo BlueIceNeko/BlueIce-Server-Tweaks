@@ -240,6 +240,10 @@ public class TranslationHelper {
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Prevent poisonous potato item entity spawn", "阻止毒马铃薯掉落物生成"}
         ));
+        add(Config.prevent_anvil_break, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Prevent anvil break", "阻止铁砧破碎"}
+        ));
         add(Config.prevent_nether_portal_break, new Translation(
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Prevent nether portal break", "阻止地狱门破碎"}
@@ -263,6 +267,10 @@ public class TranslationHelper {
         add(Config.prevent_cushion_item_entity_produce_vibration, new Translation(
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Prevent cushion item entity produce vibration", "阻止坐垫物品实体震动"}
+        ));
+        add(Config.remove_anvil_damage_limit, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Remove anvil damage limit", "移除铁砧伤害上限"}
         ));
         add(Config.remove_enchantment_power_limit, new Translation(
                 new String[] {"en_us", "zh_cn"},
@@ -311,6 +319,10 @@ public class TranslationHelper {
         add(Config.villager_major_positive_fix, new Translation(
                 new String[] {"en_us", "zh_cn"},
                 new String[] {"Reintroduce old villager major positive calculation", "村民major_positive计算回退"}
+        ));
+        add(Config.minecart_drop_fix, new Translation(
+                new String[] {"en_us", "zh_cn"},
+                new String[] {"Reintroduce old minecart drop behavior", "矿车掉落行为回退"}
         ));
         add(Config.debug_gamerule, new Translation(
                 new String[] {"en_us", "zh_cn"},

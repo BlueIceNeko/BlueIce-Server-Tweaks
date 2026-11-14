@@ -9,6 +9,7 @@
     "LivingEntityMixin",
     "PlayerMixin",
     "ServerPlayerMixin",
+    "AnvilBlockMixin",
     "NetherPortalBlockMixin",
     "BedBlockMixin",
     "StrawBedBlockMixin",
@@ -30,6 +31,7 @@
     "ProjectileWeaponItemMixin",
     "BoneMealItemMixin",
     "ItemEntityMixin",
+    "VehicleEntityMixin",
     "EndermanMixin",
     "ShulkerMixin",
     "AbstractArrowMixin",
@@ -40,6 +42,7 @@
     "PiglinAiMixin",
     "EndIslandFunctionMixin",
     "EnchantmentHelperMixin",
+    "AnvilMenuMixin",
     "EnchantmentMenuMixin",
     "WeatheringCopperMixin",
     "GossipTypeMixin"

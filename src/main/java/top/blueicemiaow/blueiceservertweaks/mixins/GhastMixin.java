@@ -10,7 +10,7 @@ import top.blueicemiaow.blueiceservertweaks.tools.ConfigHelper;
 @Mixin(Ghast.class)
 public abstract class GhastMixin {
     @ModifyConstant(method = "leashSnapDistance", constant = @Constant(doubleValue = 16))
-    private double removeLeashLengthLimit(double constant) {
+    private double leashSnapDistance(double constant) {
         return ConfigHelper.get(Config.remove_lead_length_limit) ? Double.MAX_VALUE : constant;
     }
 }
